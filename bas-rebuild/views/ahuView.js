@@ -155,7 +155,7 @@ function renderDiagram({ canvas, items }, ctx, title) {
     viewBox: `0 0 ${canvas.width} ${canvas.height}`,
     preserveAspectRatio: 'xMidYMid meet',
     role: 'img',
-    'aria-label': `${title} 계통도`,
+    'aria-label': `${title} 화면`,
   });
   // 배열 순서가 그리는 순서(위에 올라오는 순서)다.
   for (const item of items) {
@@ -176,11 +176,11 @@ function renderDiagram({ canvas, items }, ctx, title) {
 export function createAhuView({ building, ahuId, points: given }) {
   const points = given ?? createPointStore();
   const stopRuntime = given ? null : startAhuRuntime(points);
-  const stage = el('div', { className: 'ahu__stage' }, el('p', { className: 'ahu__status', textContent: '계통도를 불러오는 중' }));
+  const stage = el('div', { className: 'ahu__stage' }, el('p', { className: 'ahu__status', textContent: '화면를 불러오는 중' }));
   const element = el(
     'div',
     { className: 'page ahu' },
-    el('header', { className: 'ahu__head' }, el('h2', { textContent: ahuId }), el('span', { textContent: `${building.textContent} 공조기 계통도` })),
+    el('header', { className: 'ahu__head' }, el('h2', { textContent: ahuId }), el('span', { textContent: `${building.textContent} 공조기 화면` })),
     stage,
   );
 
@@ -194,7 +194,7 @@ export function createAhuView({ building, ahuId, points: given }) {
     })
     .catch((err) => {
       console.error(err);
-      if (!destroyed) stage.replaceChildren(el('p', { className: 'ahu__status', textContent: '계통도 배치를 불러오지 못했습니다.' }));
+      if (!destroyed) stage.replaceChildren(el('p', { className: 'ahu__status', textContent: '화면 배치를 불러오지 못했습니다.' }));
     });
 
   return {
