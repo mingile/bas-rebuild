@@ -73,7 +73,7 @@ function loadJson(url) {
   if (!jsonCache.has(url)) {
     jsonCache.set(
       url,
-      fetch(url)
+      fetch(url, { cache: 'no-cache' }) // 배치 JSON을 고친 뒤 새로고침하면 바로 반영되도록 매번 서버에 확인한다
         .then((res) => {
           if (!res.ok) throw new Error(`${url} 로드 실패 (${res.status})`);
           return res.json();
@@ -88,7 +88,7 @@ function loadJson(url) {
 }
 
 /**
- * AHU 계통도 배치. 에셋 카탈로그를 합쳐 돌려준다.
+ * AHU 화면 배치. 에셋 카탈로그를 합쳐 돌려준다.
  * 반환: { canvas: { width, height }, items: [...], assets: { [key]: { src, width, height } } }
  * 항목 형식은 layouts/README.md 참고.
  */
