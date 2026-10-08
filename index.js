@@ -150,6 +150,15 @@ const FEATURE_TRIGGERS = {
       onEnter(doc, ".alarm-btn", flash);
       onClickIn(doc, ".alarm-btn, .alarm-console__ack", flash);
     },
+    // AHU 화면: 덕트·센서 등 상태가 없는 설비 이미지
+    "ahu-layout": (doc, flash) =>
+      onEnter(doc, ".ahu__svg g[data-item]:not([data-point]):not(.ahu-tag):not(.ahu-switch):not(.ahu-label)", flash),
+    // AHU 화면: 팬·댐퍼·코일처럼 포인트에 따라 이미지가 바뀌는 설비
+    "ahu-state": (doc, flash) => onEnter(doc, ".ahu__svg g[data-point]:not(.ahu-tag):not(.ahu-switch)", flash),
+    // AHU 화면: 포인트 값 태그
+    "ahu-status-color": (doc, flash) => onEnter(doc, ".ahu-tag", flash),
+    // AHU 화면: 운전/정지 스위치
+    "ahu-control": (doc, flash) => onClickIn(doc, ".ahu-switch", flash),
   },
 };
 
