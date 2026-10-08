@@ -1,0 +1,300 @@
+body{
+  background-color : black; 
+  box-sizing: border-box;
+}
+
+  /*.autocomplete {*/
+  /*position: absolute;*/
+  /*right: 30px;*/
+  /*display: inline-block;*/
+  /*}*/
+
+  .autocomplete-items {
+      position: absolute;
+      border: 1px solid #d4d4d4;
+      border-bottom: none;
+      border-top: none;
+      z-index: 99;
+      width:120px;
+      top: 70%;
+      left: 40px;
+      right: 0;
+  }
+
+  .autocomplete-items div {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #fff;
+      border-bottom: 1px solid #d4d4d4;
+  }
+
+  .autocomplete-items div:hover {
+      background-color: #e9e9e9;
+  }
+
+  .autocomplete-active {
+  background-color: DodgerBlue !important;
+      color: #ffffff;
+  }	
+
+#map{
+  width:100vw;
+  height:100vh;
+  position: relative;
+  z-index: 0; /* Leaflet 패널(z-index 400~700)이 마커·서치바 위로 올라오지 않게 스택 컨텍스트 생성 */
+}
+.searchBox {
+  position:absolute;
+  top:100px;
+  right:30px;
+}
+
+.listBox {
+  max-width: 500px;
+  display: none;
+}
+
+/* #search{
+  width: 100px;
+  height:35px;
+  margin: 0 auto;
+  padding: 0;
+} */
+
+#temp{
+  margin-left: 600px;
+}
+
+.listInner {
+  background-color: #dedede;
+  margin: 10px 5px;
+  padding: 4px;
+  display: none;
+}
+
+.user-wrap{
+  width: 75px;
+}
+
+.point {
+  color: black;
+  font-size: 50px;
+  display: block;
+}
+
+.text{
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  top: 30px;
+  left: -25%;
+  background-color: white;
+  border: outset navy;
+  display: flex;
+  padding: 2px 7px;
+  white-space: nowrap;
+  transform:translate(-25%,5%)
+}
+
+.marker{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+.marker_info {
+    font-family: Consolas, monospace;
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #444444;
+    border-radius: 5px;
+    color: #ffffff;
+    position:absolute;
+    display: none;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* 박스 가운데가 마커 중심 아래에 오도록 */
+    white-space: nowrap;         /* 텍스트 길이에 맞춰 박스가 늘어나고 한 줄로 유지 */
+}
+
+.marker_link {
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: yellow;
+    width: 10px;
+    height: 10px;
+    opacity: 0.4;
+    display: block;
+    transition: transform 1s;
+}
+
+/* 10x10 → 20x20. scale이라 중심이 고정된다 */
+.marker_link:hover{
+    opacity: 0.75;
+    border: 1px solid red;
+    transform: scale(2);
+}
+
+.map-notice-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: 0 0 3px #000000, 0 0 6px #000000; /* 위성 이미지 위에서도 읽히도록 */
+    pointer-events: none;
+}
+
+.marker_link:hover + .marker_info{    
+  position:absolute;
+  display: block;
+}
+
+button, input {
+    font: 1em Hind, calibri;
+    line-height: 1.5em;
+}
+input {
+    color: #171717;
+}
+.search-bar {
+    display: flex;
+}
+
+.search-bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+    transition: all 0.25s ease-out;
+}
+.search-bar input,
+.search-btn {
+    width: 3em;
+    height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+    cursor: pointer;
+}
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid  {
+    width: 100%;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+    outline: transparent;
+}
+.search-bar {
+  padding:2em;
+  position: absolute;
+  top:70px;
+  right:10px;
+    justify-content: center;
+    max-width: 12em;
+}
+.search-bar input {
+    background: transparent;
+    border-radius: 1.5em;
+    box-shadow: 0 0 0 0.6em #ffd530 inset;
+    padding: 0.75em;
+    transform: translate(0.5em,0.5em) scale(0.5);
+    transform-origin: 100% 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.search-bar input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+    background: #fff;
+    border-radius: 0.375em 0 0 0.375em;
+    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+    transform: scale(1);
+}
+.search-btn {
+    background: #ffd530;
+    border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+    padding: 0.75em;
+    position: relative;
+    transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+    transform-origin: 0 50%;
+}
+.search-btn:before, 
+.search-btn:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+}
+.search-btn:before {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+    top: 0.75em;
+    left: 0.75em;
+    width: 1.2em;
+    height: 1.2em;
+}
+.search-btn:after {
+    background: #f1f1f1;
+    border-radius: 0 0.25em 0.25em 0;
+    top: 51%;
+    left: 51%;
+    width: 0.75em;
+    height: 0.25em;
+    transform: translate(0.2em,0) rotate(45deg);
+    transform-origin: 0 50%;
+}
+.search-btn span {
+    display: inline-block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+/* Active state */
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+    background: #ffd530;
+    border-radius: 0 0.375em 0.375em 0;
+    transform: scale(1);
+}
+.search-bar input:focus + .search-btn:before, 
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before, 
+.search-bar input:valid + .search-btn:after {
+    opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+    background: #0c48db;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+    transform: translateY(1px);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body, input {
+        color: #f1f1f1;
+    }
+    body {
+        background: #171717;
+    }
+    .search-bar input {
+        box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+    }
+    .search-bar input:focus,
+    .search-bar input:valid {
+        background: #3d3d3d;
+        box-shadow: 0 0 0 0.1em #3d3d3d inset;
+    }
+    .search-btn {
+        background: #f1f1f1;
+    }
+}

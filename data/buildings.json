@@ -1,0 +1,480 @@
+{
+  "buildings": [
+    {
+      "id": "B00101",
+      "label": "B00101 Admin Building",
+      "textContent": "Admin Building",
+      "href": "building.html#/building/101",
+      "linkClass": "LINK_B00101",
+      "infoClass": "INFO_B00101",
+      "position": {
+        "top": 190,
+        "left": 740
+      },
+      "info": {
+        "usage": "업무시설",
+        "floors": 5,
+        "grossArea": 6200,
+        "builtYear": 1998
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2"
+      ],
+      "photo": "images/buildings/B00101.svg",
+      "alarms": [
+        {
+          "id": "B00101-A1",
+          "time": "2026-10-08 08:41:12",
+          "equipment": "AHU-2",
+          "message": "급기온도 상한 초과",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B00101-A2",
+          "time": "2026-10-07 16:05:33",
+          "equipment": "AHU-1",
+          "message": "필터 차압 높음",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B00101-A3",
+          "time": "2026-10-06 13:20:48",
+          "equipment": "EF-1",
+          "message": "팬 상태 불일치",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00102",
+      "label": "B00102 Engineering Hall",
+      "textContent": "Engineering Hall",
+      "href": "building.html#/building/102",
+      "linkClass": "LINK_B00102",
+      "infoClass": "INFO_B00102",
+      "position": {
+        "top": 125,
+        "left": 297
+      },
+      "info": {
+        "usage": "교육연구시설",
+        "floors": 6,
+        "grossArea": 9800,
+        "builtYear": 2005
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2",
+        "AHU-3",
+        "AHU-4"
+      ],
+      "photo": "images/buildings/B00102.svg",
+      "alarms": [
+        {
+          "id": "B00102-A1",
+          "time": "2026-10-08 09:12:07",
+          "equipment": "AHU-3",
+          "message": "급기팬 과부하",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B00102-A2",
+          "time": "2026-10-08 07:58:40",
+          "equipment": "AHU-4",
+          "message": "냉수밸브 개도 편차",
+          "status": "alarm",
+          "acked": true
+        },
+        {
+          "id": "B00102-A3",
+          "time": "2026-10-07 11:30:15",
+          "equipment": "AHU-1",
+          "message": "필터 차압 높음",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B00102-A4",
+          "time": "2026-10-05 15:44:02",
+          "equipment": "AHU-2",
+          "message": "급기온도 하한 미달",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00123",
+      "label": "B00123 Science Center",
+      "textContent": "Science Center",
+      "href": "building.html#/building/123",
+      "linkClass": "LINK_B00123",
+      "infoClass": "INFO_B00123",
+      "position": {
+        "top": 349,
+        "left": 301
+      },
+      "info": {
+        "usage": "교육연구시설",
+        "floors": 4,
+        "grossArea": 7400,
+        "builtYear": 2011
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2",
+        "AHU-3"
+      ],
+      "photo": "images/buildings/B00123.svg",
+      "alarms": [
+        {
+          "id": "B00123-A1",
+          "time": "2026-10-08 06:25:51",
+          "equipment": "AHU-1",
+          "message": "환기온도 센서 이상",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B00123-A2",
+          "time": "2026-10-07 09:10:26",
+          "equipment": "AHU-3",
+          "message": "급기팬 상태 불일치",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B00123-A3",
+          "time": "2026-10-06 18:02:39",
+          "equipment": "EF-2",
+          "message": "팬 과부하",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00215",
+      "label": "B00215 Library",
+      "textContent": "Library",
+      "href": "building.html#/building/215",
+      "linkClass": "LINK_B00215",
+      "infoClass": "INFO_B00215",
+      "position": {
+        "top": 300,
+        "left": 520
+      },
+      "info": {
+        "usage": "도서관",
+        "floors": 3,
+        "grossArea": 5600,
+        "builtYear": 1994
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2"
+      ],
+      "photo": "images/buildings/B00215.svg",
+      "alarms": [
+        {
+          "id": "B00215-A1",
+          "time": "2026-10-07 14:18:09",
+          "equipment": "AHU-1",
+          "message": "급기온도 하한 미달",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B00215-A2",
+          "time": "2026-10-05 10:03:57",
+          "equipment": "AHU-2",
+          "message": "필터 차압 높음",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00310",
+      "label": "B00310 Student Union",
+      "textContent": "Student Union",
+      "href": "building.html#/building/310",
+      "linkClass": "LINK_B00310",
+      "infoClass": "INFO_B00310",
+      "position": {
+        "top": 495,
+        "left": 855
+      },
+      "info": {
+        "usage": "학생복지시설",
+        "floors": 3,
+        "grossArea": 4300,
+        "builtYear": 2002
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2",
+        "AHU-3"
+      ],
+      "photo": "images/buildings/B00310.svg",
+      "alarms": [
+        {
+          "id": "B00310-A1",
+          "time": "2026-10-08 10:02:33",
+          "equipment": "AHU-2",
+          "message": "필터 차압 높음",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B00310-A2",
+          "time": "2026-10-07 12:47:18",
+          "equipment": "EF-1",
+          "message": "팬 상태 불일치",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00420",
+      "label": "B00420 Lecture Hall",
+      "textContent": "Lecture Hall",
+      "href": "building.html#/building/420",
+      "linkClass": "LINK_B00420",
+      "infoClass": "INFO_B00420",
+      "position": {
+        "top": 550,
+        "left": 684
+      },
+      "info": {
+        "usage": "교육시설",
+        "floors": 3,
+        "grossArea": 3900,
+        "builtYear": 2008
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2"
+      ],
+      "photo": "images/buildings/B00420.svg",
+      "alarms": [
+        {
+          "id": "B00420-A1",
+          "time": "2026-10-06 08:55:44",
+          "equipment": "AHU-1",
+          "message": "급기온도 상한 초과",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00512",
+      "label": "B00512 Research Lab",
+      "textContent": "Research Lab",
+      "href": "building.html#/building/512",
+      "linkClass": "LINK_B00512",
+      "infoClass": "INFO_B00512",
+      "position": {
+        "top": 706,
+        "left": 847
+      },
+      "info": {
+        "usage": "연구시설",
+        "floors": 4,
+        "grossArea": 8100,
+        "builtYear": 2016
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2",
+        "AHU-3",
+        "AHU-4",
+        "AHU-5"
+      ],
+      "photo": "images/buildings/B00512.svg",
+      "alarms": [
+        {
+          "id": "B00512-A1",
+          "time": "2026-10-08 09:40:02",
+          "equipment": "AHU-4",
+          "message": "급기압력 저하",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B00512-A2",
+          "time": "2026-10-08 09:38:19",
+          "equipment": "AHU-5",
+          "message": "통신 끊김",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B00512-A3",
+          "time": "2026-10-08 05:12:46",
+          "equipment": "AHU-1",
+          "message": "냉수밸브 개도 편차",
+          "status": "alarm",
+          "acked": true
+        },
+        {
+          "id": "B00512-A4",
+          "time": "2026-10-07 17:33:21",
+          "equipment": "EF-3",
+          "message": "팬 과부하",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B00512-A5",
+          "time": "2026-10-06 11:09:58",
+          "equipment": "AHU-2",
+          "message": "환기온도 센서 이상",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B00634",
+      "label": "B00634 Gymnasium",
+      "textContent": "Gymnasium",
+      "href": "building.html#/building/634",
+      "linkClass": "LINK_B00634",
+      "infoClass": "INFO_B00634",
+      "position": {
+        "top": 654,
+        "left": 334
+      },
+      "info": {
+        "usage": "체육시설",
+        "floors": 1,
+        "grossArea": 2800,
+        "builtYear": 2000
+      },
+      "ahus": [
+        "AHU-1"
+      ],
+      "photo": "images/buildings/B00634.svg",
+      "alarms": []
+    },
+    {
+      "id": "B06440",
+      "label": "B06440 Medical Center",
+      "textContent": "Medical Center",
+      "href": "building.html#/building/6440",
+      "linkClass": "LINK_B06440",
+      "infoClass": "INFO_B06440",
+      "position": {
+        "top": 543,
+        "left": 1120
+      },
+      "info": {
+        "usage": "의료시설",
+        "floors": 7,
+        "grossArea": 15200,
+        "builtYear": 2013
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2",
+        "AHU-3",
+        "AHU-4",
+        "AHU-5",
+        "AHU-6"
+      ],
+      "photo": "images/buildings/B06440.svg",
+      "alarms": [
+        {
+          "id": "B06440-A1",
+          "time": "2026-10-08 08:20:14",
+          "equipment": "AHU-5",
+          "message": "급기온도 상한 초과",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B06440-A2",
+          "time": "2026-10-08 07:45:30",
+          "equipment": "AHU-2",
+          "message": "급기팬 과부하",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B06440-A3",
+          "time": "2026-10-07 20:11:03",
+          "equipment": "AHU-6",
+          "message": "필터 차압 높음",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B06440-A4",
+          "time": "2026-10-06 14:36:27",
+          "equipment": "AHU-3",
+          "message": "통신 끊김",
+          "status": "normal",
+          "acked": true
+        },
+        {
+          "id": "B06440-A5",
+          "time": "2026-10-05 09:27:50",
+          "equipment": "EF-4",
+          "message": "팬 상태 불일치",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    },
+    {
+      "id": "B07001",
+      "label": "B07001 Conference Center",
+      "textContent": "Conference Center",
+      "href": "building.html#/building/7001",
+      "linkClass": "LINK_B07001",
+      "infoClass": "INFO_B07001",
+      "position": {
+        "top": 347,
+        "left": 922
+      },
+      "info": {
+        "usage": "문화집회시설",
+        "floors": 3,
+        "grossArea": 6900,
+        "builtYear": 2019
+      },
+      "ahus": [
+        "AHU-1",
+        "AHU-2",
+        "AHU-3"
+      ],
+      "photo": "images/buildings/B07001.svg",
+      "alarms": [
+        {
+          "id": "B07001-A1",
+          "time": "2026-10-08 09:55:36",
+          "equipment": "AHU-3",
+          "message": "환기온도 센서 이상",
+          "status": "alarm",
+          "acked": false
+        },
+        {
+          "id": "B07001-A2",
+          "time": "2026-10-07 13:22:44",
+          "equipment": "AHU-1",
+          "message": "급기온도 하한 미달",
+          "status": "normal",
+          "acked": true
+        }
+      ]
+    }
+  ]
+}

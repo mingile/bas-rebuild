@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- @noSnoop -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UMCS OVERVIEW</title>
+    <link rel="stylesheet" href="./lib/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div class="listBox"></div>
+
+    <div class="srch_form autocomplete">
+      <form action="" class="search-bar">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          onkeyup="filter()"
+          pattern=".*\S.*"
+          required
+        />
+        <button class="search-btn" type="submit">
+          <span>Search</span>
+        </button>
+      </form>
+      <div id="autoMaker"></div>
+    </div>
+  </body>
+
+  <script src="./lib/leaflet/leaflet.js"></script>
+  <script src="main.js"></script>
+</html>
