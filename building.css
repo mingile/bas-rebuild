@@ -1,0 +1,863 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1822;
+  --bar: #16222f;
+  --line: #243546;
+  --text: #e8eef4;
+  --muted: #9bb0c4;
+  --btn: #1f3145;
+  --btn-hover: #2a4260;
+  --accent: #4aa3ff;
+  --ok: #1e7a4c;
+  --danger: #d6363c;
+  --gutter: clamp(1rem, 3vw, 2.5rem);
+  font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#app {
+  height: 100vh;
+  height: 100dvh;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── 레이아웃: 상단 10% 메뉴 바 / 나머지 90% 콘텐츠 ─────────────────────
+   메뉴 바 내용(이름 줄 + 버튼 줄)이 10%보다 크면 내용 높이만큼 늘어난다. 좁은 화면에서 버튼이 줄바꿈될 때도 겹치지 않는다. */
+
+.shell {
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(min-content, 10%) minmax(0, 1fr);
+}
+
+.content {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.page-slot {
+  height: 100%;
+}
+
+.page {
+  position: relative;
+  height: 100%;
+}
+
+.page__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 재구성·가상 데이터 안내. 모든 페이지 하단에 고정 */
+.notice {
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+  padding: 0.5rem var(--gutter);
+  font-size: 0.8125rem;
+  color: #fff;
+  background: rgb(0 0 0 / 0.68);
+}
+
+/* ── 메뉴 바 ──────────────────────────────────────────────────────── */
+
+.menubar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem var(--gutter);
+  background: var(--bar);
+  border-bottom: 1px solid var(--line);
+}
+
+.menubar__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+
+.menubar__back {
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.menubar__back:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.menubar__name {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.menubar__id {
+  margin-left: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.menubar__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.menubar__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn,
+.alarm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn {
+  background: var(--btn);
+  color: var(--text);
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.btn[aria-current="page"],
+.btn.is-active {
+  border-color: var(--accent);
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.btn--dropdown::after {
+  content: "";
+  border: 0.3rem solid transparent;
+  border-top-color: currentColor;
+  border-bottom: 0;
+}
+
+.btn--dropdown[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* ── AHU 드롭다운 ─────────────────────────────────────────────────── */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__list {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  min-width: 100%;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--bar);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.45);
+}
+
+.dropdown__list[hidden] {
+  display: none;
+}
+
+.dropdown__list a,
+.dropdown__empty {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 0.35rem;
+  white-space: nowrap;
+}
+
+.dropdown__list a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.dropdown__list a:hover {
+  background: var(--btn-hover);
+}
+
+.dropdown__list a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.dropdown__empty {
+  color: var(--muted);
+}
+
+/* ── 알람 상태 버튼 ───────────────────────────────────────────────── */
+
+.alarm-btn {
+  color: #fff;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.alarm-btn::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.alarm-btn--none {
+  background: var(--ok);
+}
+
+.alarm-btn--active {
+  background: var(--danger);
+}
+
+.alarm-btn--active::before {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+.alarm-btn--acked {
+  background: #b45f06; /* 알람은 남아 있지만 모두 확인함 */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alarm-btn--active::before {
+    animation: none;
+  }
+}
+
+/* ── 건물 홈: 기본 정보 카드 ──────────────────────────────────────── */
+
+.info-card {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 3.5rem; /* 하단 안내 문구 위 */
+  min-width: 15rem;
+  padding: 1rem 1.25rem;
+  background: rgb(15 24 34 / 0.84);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 0.75rem;
+}
+
+.info-card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.info-card dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1.5rem;
+  margin: 0;
+}
+
+.info-card dt {
+  color: var(--muted);
+}
+
+.info-card dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* ── 준비 중 / 안내 페이지 ────────────────────────────────────────── */
+
+.page--message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem var(--gutter) 4rem;
+  text-align: center;
+}
+
+.page--message h1,
+.page--message h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.page--message p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.page--message .btn {
+  margin-top: 0.75rem;
+}
+
+.page__eyebrow {
+  font-size: 0.875rem;
+}
+
+.page--standalone {
+  height: 100%;
+  padding-bottom: 1.5rem;
+}
+
+/* ── 알람 콘솔 ────────────────────────────────────────────────────── */
+
+.alarm-console {
+  width: min(56rem, calc(100vw - 2rem));
+  max-height: min(36rem, calc(100dvh - 2rem));
+  padding: 0; /* 백드롭 클릭 판별을 위해 dialog 자체에는 여백을 두지 않는다 */
+  overflow: hidden;
+  color: var(--text);
+  background: var(--bar);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.alarm-console[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm-console::backdrop {
+  background: rgb(0 0 0 / 0.6);
+}
+
+.alarm-console__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.alarm-console__head h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.alarm-console__sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.alarm-console__close,
+.dialog-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.alarm-console__close:hover,
+.dialog-close:hover {
+  background: var(--btn-hover);
+}
+
+.alarm-console__body {
+  overflow: auto;
+}
+
+.alarm-console__table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.alarm-console__table th {
+  position: sticky;
+  top: 0;
+  padding: 0.65rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--bar);
+  border-bottom: 1px solid var(--line);
+}
+
+.alarm-console__table td {
+  padding: 0.7rem 1.25rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.06);
+}
+
+.alarm-console__table tr.is-unacked {
+  background: rgb(214 54 60 / 0.14);
+}
+
+.alarm-console__table tr.is-acked {
+  background: rgb(180 95 6 / 0.12);
+}
+
+.alarm-console__ack {
+  min-height: 2rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: var(--btn);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alarm-console__ack:hover:not(:disabled) {
+  background: var(--btn-hover);
+}
+
+.alarm-console__ack:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.alarm-console__time {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.alarm-console__empty {
+  margin: 0;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.chip--unacked {
+  background: var(--danger);
+  color: #fff;
+}
+
+.chip--acked {
+  background: #b45f06;
+  color: #fff;
+}
+
+.chip--normal {
+  background: #2b3d50;
+  color: var(--muted);
+}
+
+/* ── TREND 페이지 ─────────────────────────────────────────────────── */
+
+.trend {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem var(--gutter) 3.25rem; /* 하단 안내 문구 위 */
+}
+
+.trend__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.trend__title {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.trend__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-height: 1.75rem; /* 선택이 없어도 차트 위치가 흔들리지 않게 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip--select {
+  background: var(--btn);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.trend__side {
+  align-self: flex-start;
+}
+
+.trend-chart {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 0.75rem;
+  background: var(--bar);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.trend-chart__canvas {
+  position: relative;
+  height: 100%;
+}
+
+.trend-chart__message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.trend-chart__message[hidden] {
+  display: none;
+}
+
+/* ── 설비 선택 콘솔 ───────────────────────────────────────────────── */
+
+.picker {
+  width: min(28rem, calc(100vw - 2rem));
+  max-height: min(36rem, calc(100dvh - 2rem));
+  padding: 0;
+  overflow: hidden;
+  color: var(--text);
+  background: var(--bar);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.picker[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.picker::backdrop {
+  background: rgb(0 0 0 / 0.6);
+}
+
+.picker__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.picker__head h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.picker__sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.picker__tree,
+.picker__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.picker__tree {
+  flex: 1;
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.picker__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.picker__toggle:hover {
+  background: var(--btn-hover);
+}
+
+.picker__toggle::before {
+  content: "";
+  border: 0.3rem solid transparent;
+  border-left-color: currentColor;
+  border-right: 0;
+  transition: transform 0.12s;
+}
+
+.picker__toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.picker__count {
+  margin-left: auto;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.picker__list {
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--line);
+}
+
+.picker__list[hidden] {
+  display: none;
+}
+
+.picker__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.5rem;
+  padding: 0 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.picker__item:hover {
+  background: var(--btn-hover);
+}
+
+.picker__item input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+}
+
+.picker__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.picker__summary {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* ── 좁은 화면 ────────────────────────────────────────────────────── */
+
+@media (max-width: 40rem) {
+  .btn,
+  .alarm-btn {
+    min-height: 2.75rem;
+    padding: 0 0.9rem;
+  }
+
+  .info-card {
+    right: var(--gutter);
+    min-width: 0;
+  }
+
+  .trend {
+    flex-direction: column-reverse;
+  }
+
+  .trend__side {
+    align-self: stretch;
+  }
+
+  .trend__side .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── AHU 계통도 ───────────────────────────────────────────────────── */
+
+.ahu {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem var(--gutter) 3rem; /* 하단은 안내 문구 높이만큼 비운다 */
+}
+
+.ahu__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex: none;
+}
+
+.ahu__head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.ahu__head span {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.ahu__stage {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+
+.ahu__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ahu__status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ahu-tag rect {
+  fill: rgb(15 24 34 / 0.88);
+  stroke: var(--line);
+}
+
+.ahu-tag text,
+.ahu-label {
+  dominant-baseline: central;
+  font-size: 15px;
+}
+
+/* 태그 폭(112)에 "SA-F 9000 CFM"까지 들어가도록 태그 안 글자는 조금 작게 */
+.ahu-tag text {
+  font-size: 13px;
+}
+
+.ahu-tag__label {
+  fill: var(--muted);
+}
+
+.ahu-tag__value {
+  fill: var(--text);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.ahu-label {
+  fill: var(--muted);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 명령 박스: 태그와 같은 폭, 안에 켜기/끄기 버튼 */
+.ahu-switch__box {
+  fill: rgb(15 24 34 / 0.88);
+  stroke: var(--line);
+}
+
+.ahu-switch__label,
+.ahu-switch__btn text {
+  dominant-baseline: central;
+  font-size: 13px;
+}
+
+.ahu-switch__label {
+  fill: var(--muted);
+}
+
+.ahu-switch__btn {
+  cursor: pointer;
+  outline: none;
+}
+
+.ahu-switch__btn rect {
+  fill: var(--btn);
+  stroke: var(--line);
+}
+
+.ahu-switch__btn:hover rect {
+  fill: var(--btn-hover);
+}
+
+.ahu-switch__btn.is-on rect {
+  fill: var(--ok);
+  stroke: transparent;
+}
+
+.ahu-switch__btn:focus-visible rect {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.ahu-switch__btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ahu-switch__btn text {
+  fill: var(--text);
+  font-weight: 700;
+  text-anchor: middle;
+  pointer-events: none;
+}
