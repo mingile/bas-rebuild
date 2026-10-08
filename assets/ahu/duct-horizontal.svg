@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="224" viewBox="0 0 640 224" fill="none" role="img" aria-labelledby="dh-title dh-desc">
+  <title id="dh-title">내부가 열린 수평 HVAC 덕트</title>
+  <desc id="dh-desc">윗면을 제거하고 위에서 내려다본 수평 사각 덕트. 좌우는 열린 연결부이며 상하의 얇은 금속 벽 사이로 내부 바닥 전체가 보입니다. 중앙 공간 위에 센서나 설비를 배치할 수 있으며 덕트 밖은 투명합니다.</desc>
+  <defs>
+    <linearGradient id="dh-floor" x1="0" y1="54" x2="0" y2="172" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B5A65"/>
+      <stop offset=".18" stop-color="#64737E"/>
+      <stop offset=".52" stop-color="#707F89"/>
+      <stop offset=".85" stop-color="#687782"/>
+      <stop offset="1" stop-color="#52636F"/>
+    </linearGradient>
+    <linearGradient id="dh-back-wall" x1="0" y1="32" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8899A5"/>
+      <stop offset=".4" stop-color="#596C79"/>
+      <stop offset="1" stop-color="#344752"/>
+    </linearGradient>
+    <linearGradient id="dh-front-wall" x1="0" y1="170" x2="0" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8495A1"/>
+      <stop offset=".7" stop-color="#ADBBC5"/>
+      <stop offset="1" stop-color="#D5DEE4"/>
+    </linearGradient>
+    <linearGradient id="dh-back-rim" x1="0" y1="20" x2="0" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A6B4BE"/>
+      <stop offset=".28" stop-color="#F0F4F6"/>
+      <stop offset=".65" stop-color="#D0D9DF"/>
+      <stop offset="1" stop-color="#94A5B1"/>
+    </linearGradient>
+    <linearGradient id="dh-front-rim" x1="0" y1="191" x2="0" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3F6"/>
+      <stop offset=".3" stop-color="#CDD7DE"/>
+      <stop offset=".75" stop-color="#98AAB7"/>
+      <stop offset="1" stop-color="#738896"/>
+    </linearGradient>
+    <pattern id="dh-brush" width="80" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H48M28 5H80" stroke="#EDF3F7" stroke-opacity=".045" stroke-width=".6"/>
+      <path d="M8 3H62M0 7H26" stroke="#192E3D" stroke-opacity=".035" stroke-width=".6"/>
+    </pattern>
+  </defs>
+  <!-- Open-top plan view. Left/right edges stay open and align with adjoining duct pieces. -->
+  <g id="dh-interior">
+    <path d="M0 32H640V192H0Z" fill="url(#dh-floor)"/>
+    <path d="M0 56H640V170H0Z" fill="url(#dh-brush)"/>
+    <path d="M0 32H640V56H0Z" fill="url(#dh-back-wall)"/>
+    <path d="M0 170H640V192H0Z" fill="url(#dh-front-wall)"/>
+    <path d="M0 56H640" stroke="#213640" stroke-opacity=".48" stroke-width="1.5"/>
+    <path d="M0 170H640" stroke="#D6E1E7" stroke-opacity=".38"/>
+  </g>
+  <g id="dh-metal-rims">
+    <path d="M0 20H640V33H0Z" fill="url(#dh-back-rim)"/>
+    <path d="M0 191H640V204H0Z" fill="url(#dh-front-rim)"/>
+    <path d="M0 20.5H640M0 203.5H640" stroke="#657C8C"/>
+    <path d="M0 23H640M0 192H640" stroke="#FFF" stroke-opacity=".8"/>
+    <path d="M0 33H640" stroke="#334B5B" stroke-opacity=".6"/>
+    <!-- Small sheet-metal seams only on the rails, leaving the interior unobstructed. -->
+    <path d="M212 21V33M428 21V33M212 192V203M428 192V203" stroke="#617989" stroke-opacity=".4"/>
+    <path d="M214 21V32M430 21V32M214 193V202M430 193V202" stroke="#FFF" stroke-opacity=".55"/>
+  </g>
+  <!-- Overlay equipment above this asset. Clear central placement area: x=0..640, y=62..164. -->
+</svg>

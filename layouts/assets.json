@@ -1,0 +1,18 @@
+{
+  "coil-cooling-angle": { "src": "assets/ahu/coil-cooling-angle.svg", "width": 224, "height": 224 },
+  "coil-heating-angle": { "src": "assets/ahu/coil-heating-angle.svg", "width": 224, "height": 224 },
+  "coil-off-angle": { "src": "assets/ahu/coil-off-angle.svg", "width": 224, "height": 224 },
+  "damper-closed": { "src": "assets/ahu/damper-closed.svg", "width": 224, "height": 224 },
+  "damper-open": { "src": "assets/ahu/damper-open.svg", "width": 224, "height": 224 },
+  "duct-horizontal": { "src": "assets/ahu/duct-horizontal.svg", "width": 640, "height": 224 },
+  "duct_vertical": { "src": "assets/ahu/duct_vertical.svg", "width": 224, "height": 640 },
+  "duct_T": { "src": "assets/ahu/duct_T.svg", "width": 640, "height": 432 },
+  "duct_T_r": { "src": "assets/ahu/duct_T_r.svg", "width": 640, "height": 432 },
+  "sensor-airflow": { "src": "assets/ahu/sensor-airflow.svg", "width": 160, "height": 160 },
+  "sensor-freezestat-alarm": { "src": "assets/ahu/sensor-freezestat-alarm.svg", "width": 160, "height": 160 },
+  "sensor-humidity": { "src": "assets/ahu/sensor-humidity.svg", "width": 160, "height": 160 },
+  "sensor-smoke-alarm": { "src": "assets/ahu/sensor-smoke-alarm.svg", "width": 160, "height": 160 },
+  "sensor-temperature": { "src": "assets/ahu/sensor-temperature.svg", "width": 160, "height": 160 },
+  "supply-fan": { "src": "assets/ahu/supply-fan.svg", "width": 240, "height": 208 },
+  "supply-fan-animated": { "src": "assets/ahu/supply-fan-animated.svg", "width": 240, "height": 208 }
+}

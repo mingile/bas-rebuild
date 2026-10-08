@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="432" viewBox="0 0 640 432" fill="none" role="img" aria-labelledby="dtd-title dtd-desc">
+<title id="dtd-title">내부가 열린 아래 방향 T자 HVAC 덕트</title>
+<desc id="dtd-desc">좌우와 아래쪽으로 연결되는 T자 덕트. 기존 수평 및 수직 덕트의 폭과 단면 명암을 유지하며 중앙 내부가 열려 있습니다. 배경은 투명합니다.</desc>
+<defs>
+
+    <linearGradient id="dtd-h-floor" x1="0" y1="54" x2="0" y2="172" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B5A65"/>
+      <stop offset=".18" stop-color="#64737E"/>
+      <stop offset=".52" stop-color="#707F89"/>
+      <stop offset=".85" stop-color="#687782"/>
+      <stop offset="1" stop-color="#52636F"/>
+    </linearGradient>
+    <linearGradient id="dtd-h-back-wall" x1="0" y1="32" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8899A5"/>
+      <stop offset=".4" stop-color="#596C79"/>
+      <stop offset="1" stop-color="#344752"/>
+    </linearGradient>
+    <linearGradient id="dtd-h-front-wall" x1="0" y1="170" x2="0" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8495A1"/>
+      <stop offset=".7" stop-color="#ADBBC5"/>
+      <stop offset="1" stop-color="#D5DEE4"/>
+    </linearGradient>
+    <linearGradient id="dtd-h-back-rim" x1="0" y1="20" x2="0" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A6B4BE"/>
+      <stop offset=".28" stop-color="#F0F4F6"/>
+      <stop offset=".65" stop-color="#D0D9DF"/>
+      <stop offset="1" stop-color="#94A5B1"/>
+    </linearGradient>
+    <linearGradient id="dtd-h-front-rim" x1="0" y1="191" x2="0" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3F6"/>
+      <stop offset=".3" stop-color="#CDD7DE"/>
+      <stop offset=".75" stop-color="#98AAB7"/>
+      <stop offset="1" stop-color="#738896"/>
+    </linearGradient>
+    <pattern id="dtd-h-brush" width="80" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H48M28 5H80" stroke="#EDF3F7" stroke-opacity=".045" stroke-width=".6"/>
+      <path d="M8 3H62M0 7H26" stroke="#192E3D" stroke-opacity=".035" stroke-width=".6"/>
+    </pattern>
+  
+    <linearGradient id="dtd-v-floor" x1="0" y1="54" x2="0" y2="172" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#4B5A65"/>
+      <stop offset=".18" stop-color="#64737E"/>
+      <stop offset=".52" stop-color="#707F89"/>
+      <stop offset=".85" stop-color="#687782"/>
+      <stop offset="1" stop-color="#52636F"/>
+    </linearGradient>
+    <linearGradient id="dtd-v-back-wall" x1="0" y1="32" x2="0" y2="56" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#8899A5"/>
+      <stop offset=".4" stop-color="#596C79"/>
+      <stop offset="1" stop-color="#344752"/>
+    </linearGradient>
+    <linearGradient id="dtd-v-front-wall" x1="0" y1="170" x2="0" y2="192" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#8495A1"/>
+      <stop offset=".7" stop-color="#ADBBC5"/>
+      <stop offset="1" stop-color="#D5DEE4"/>
+    </linearGradient>
+    <linearGradient id="dtd-v-back-rim" x1="0" y1="20" x2="0" y2="33" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#A6B4BE"/>
+      <stop offset=".28" stop-color="#F0F4F6"/>
+      <stop offset=".65" stop-color="#D0D9DF"/>
+      <stop offset="1" stop-color="#94A5B1"/>
+    </linearGradient>
+    <linearGradient id="dtd-v-front-rim" x1="0" y1="191" x2="0" y2="204" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#EEF3F6"/>
+      <stop offset=".3" stop-color="#CDD7DE"/>
+      <stop offset=".75" stop-color="#98AAB7"/>
+      <stop offset="1" stop-color="#738896"/>
+    </linearGradient>
+    <pattern id="dtd-v-brush" width="80" height="8" patternUnits="userSpaceOnUse" patternTransform="matrix(0 -1 1 0 208 640)">
+      <path d="M0 1H48M28 5H80" stroke="#EDF3F7" stroke-opacity=".045" stroke-width=".6"/>
+      <path d="M8 3H62M0 7H26" stroke="#192E3D" stroke-opacity=".035" stroke-width=".6"/>
+    </pattern>
+  
+    <linearGradient id="dtd-blend" x1="0" y1="132" x2="0" y2="272" gradientUnits="userSpaceOnUse">
+      <stop stop-color="black"/><stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <mask id="dtd-branch-blend" x="240" y="132" width="160" height="300" maskUnits="userSpaceOnUse">
+      <path d="M240 132H400V432H240Z" fill="url(#dtd-blend)"/>
+    </mask>
+  </defs>
+<!-- Ports: left (0,112), right (640,112), bottom (320,432).
+     Horizontal envelope y=0..224; vertical envelope x=208..432.
+     Lighting follows the original straight assets, without mirroring. -->
+<g id="dtd-interior">
+ <path d="M0 32H640V192H400V432H240V192H0Z" fill="url(#dtd-h-floor)"/>
+ <path d="M240 132H400V432H240Z" fill="url(#dtd-v-floor)" mask="url(#dtd-branch-blend)"/>
+ <path d="M0 56H640V170H378V432H264V170H0Z" fill="url(#dtd-h-brush)"/>
+</g>
+<g id="dtd-inner-walls">
+ <path d="M0 32H640V56H0Z" fill="url(#dtd-h-back-wall)"/>
+ <path d="M0 170H264L240 192H0Z" fill="url(#dtd-h-front-wall)"/>
+ <path d="M240 192 264 170V432H240Z" fill="url(#dtd-v-back-wall)"/>
+ <path d="M378 170 400 192V432H378Z" fill="url(#dtd-v-front-wall)"/>
+ <path d="M378 170H640V192H400Z" fill="url(#dtd-h-front-wall)"/>
+ <path d="M0 56H640M264 170V432" stroke="#213640" stroke-opacity=".48" stroke-width="1.5"/>
+ <path d="M0 170H264M378 432V170H640" stroke="#D6E1E7" stroke-opacity=".38"/>
+ <path d="M241 191 264 170M399 191 378 170" stroke="#314956" stroke-opacity=".24"/>
+</g>
+<g id="dtd-metal-rims">
+ <path d="M0 20H640V33H0Z" fill="url(#dtd-h-back-rim)"/>
+ <path d="M0 191H241L228 204H0Z" fill="url(#dtd-h-front-rim)"/>
+ <path d="M228 204 241 191V432H228Z" fill="url(#dtd-v-back-rim)"/>
+ <path d="M399 191 412 204V432H399Z" fill="url(#dtd-v-front-rim)"/>
+ <path d="M399 191H640V204H412Z" fill="url(#dtd-h-front-rim)"/>
+ <path d="M0 20.5H640M0 203.5H228.5V432M411.5 432V203.5H640" stroke="#657C8C"/>
+ <path d="M0 23H640M0 192H239M401 192H640M231 204V432M400 193V432" stroke="#FFF" stroke-opacity=".8"/>
+ <path d="M0 33H640M241 192V432" stroke="#334B5B" stroke-opacity=".6"/>
+ <path d="M228 204 241 191M412 204 399 191" stroke="#617989" stroke-opacity=".32"/>
+ <path d="M112 21V33M528 21V33M112 192V203M528 192V203M229 320H241M400 320H411" stroke="#617989" stroke-opacity=".4"/>
+ <path d="M114 21V32M530 21V32M114 193V202M530 193V202M229 322H240M401 322H410" stroke="#FFF" stroke-opacity=".55"/>
+</g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="physical-humidity-title physical-humidity-desc"><title id="physical-humidity-title">습도 센서</title><desc id="physical-humidity-desc">실제 HVAC 장치의 구조를 참고한 제품 형태의 벡터 이미지. 특정 모델의 복제나 설치 도면이 아닙니다. 금속 질감과 투명 배경을 사용합니다.</desc><defs>
+ <linearGradient id="physical-humidity-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EFF4F7"/><stop offset=".4" stop-color="#C5D2DC"/><stop offset="1" stop-color="#8CA3B4"/></linearGradient>
+ <linearGradient id="physical-humidity-side" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#B5C6D2"/><stop offset="1" stop-color="#667F92"/></linearGradient>
+ <linearGradient id="physical-humidity-steel" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#688599"/><stop offset=".28" stop-color="#D9E5ED"/><stop offset=".48" stop-color="#F2F7FA"/><stop offset=".7" stop-color="#A7BCCB"/><stop offset="1" stop-color="#647F93"/></linearGradient>
+ </defs><g stroke-linecap="round" stroke-linejoin="round"><g>
+ <rect x="74" y="65" width="12" height="45" fill="url(#physical-humidity-steel)" stroke="#688498"/>
+ <ellipse cx="80" cy="81" rx="17" ry="5" fill="url(#physical-humidity-metal)" stroke="#728EA2"/>
+ <rect x="73" y="107" width="14" height="31" rx="5" fill="#718391" stroke="#4C6577"/>
+ <path d="M76 111v21m4-21v24m4-24v21" stroke="#C4D0D9" stroke-width="1.2"/>
+ <path d="M74 115h12m-12 6h12m-12 6h12" stroke="#3D5669" stroke-opacity=".7"/>
+ <path d="M54 25l8-6h48v40l-8 6Z" fill="url(#physical-humidity-side)" stroke="#607D90"/>
+ <path d="M54 25l8-6h48l-8 6Z" fill="#E4EDF3" stroke="#8CA3B3"/>
+ <rect x="54" y="25" width="48" height="40" rx="3" fill="url(#physical-humidity-metal)" stroke="#718B9D"/>
+ <rect x="58" y="29" width="40" height="32" rx="2" stroke="#EDF4F8" stroke-opacity=".65"/>
+ <path d="M102 27v36" stroke="#506F83"/>
+ <g fill="#657F92" stroke="#E9F1F6" stroke-width=".6"><circle cx="60" cy="31" r="1.4"/><circle cx="96" cy="59" r="1.4"/></g><path d="M45 39h9v5h-9Z" fill="#617D90"/><path d="M44 44h11v6h-11Z" fill="url(#physical-humidity-steel)" stroke="#5B788C"/><path d="M46 51v7" stroke="#334F62" stroke-width="4"/><path d="M61 48h30m-30 4h30" stroke="#7A93A6" stroke-opacity=".4"/>
+ </g></g></svg>

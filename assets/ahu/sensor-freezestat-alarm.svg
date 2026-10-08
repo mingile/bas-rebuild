@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="physical-freezestat-alarm-title physical-freezestat-alarm-desc"><title id="physical-freezestat-alarm-title">동결 방지 감지기</title><desc id="physical-freezestat-alarm-desc">실제 HVAC 장치의 구조를 참고한 제품 형태의 벡터 이미지. 특정 모델의 복제나 설치 도면이 아닙니다. 금속 질감과 투명 배경을 사용합니다.</desc><defs>
+ <linearGradient id="physical-freezestat-alarm-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EFF4F7"/><stop offset=".4" stop-color="#C5D2DC"/><stop offset="1" stop-color="#8CA3B4"/></linearGradient>
+ <linearGradient id="physical-freezestat-alarm-side" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#B5C6D2"/><stop offset="1" stop-color="#667F92"/></linearGradient>
+ <linearGradient id="physical-freezestat-alarm-steel" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#688599"/><stop offset=".28" stop-color="#D9E5ED"/><stop offset=".48" stop-color="#F2F7FA"/><stop offset=".7" stop-color="#A7BCCB"/><stop offset="1" stop-color="#647F93"/></linearGradient>
+ </defs><g stroke-linecap="round" stroke-linejoin="round"><path d="M61 80v13c0 9 12 8 18 8" stroke="#667D8A" stroke-width="3.5"/>
+ <path d="M61 80v13c0 9 12 8 18 8" stroke="#D3C2A0" stroke-width="1.9"/>
+ <ellipse cx="94" cy="108" rx="26" ry="15" fill="none" stroke="#677B85" stroke-width="2.9"/><ellipse cx="94" cy="107.6" rx="26" ry="15" fill="none" stroke="#CDBD9E" stroke-width="1.6"/><ellipse cx="97" cy="111" rx="26" ry="15" fill="none" stroke="#677B85" stroke-width="2.9"/><ellipse cx="97" cy="110.6" rx="26" ry="15" fill="none" stroke="#CDBD9E" stroke-width="1.6"/><ellipse cx="100" cy="114" rx="26" ry="15" fill="none" stroke="#677B85" stroke-width="2.9"/><ellipse cx="100" cy="113.6" rx="26" ry="15" fill="none" stroke="#CDBD9E" stroke-width="1.6"/><ellipse cx="103" cy="117" rx="26" ry="15" fill="none" stroke="#677B85" stroke-width="2.9"/><ellipse cx="103" cy="116.6" rx="26" ry="15" fill="none" stroke="#CDBD9E" stroke-width="1.6"/><ellipse cx="106" cy="120" rx="26" ry="15" fill="none" stroke="#677B85" stroke-width="2.9"/><ellipse cx="106" cy="119.6" rx="26" ry="15" fill="none" stroke="#CDBD9E" stroke-width="1.6"/><path d="M130 120q14-2 9 14" stroke="#CDBD9E" stroke-width="2"/><path d="M29 30l8-6h53v49l-8 6Z" fill="url(#physical-freezestat-alarm-side)" stroke="#607D90"/>
+ <path d="M29 30l8-6h53l-8 6Z" fill="#E4EDF3" stroke="#8CA3B3"/>
+ <rect x="29" y="30" width="53" height="49" rx="3" fill="url(#physical-freezestat-alarm-metal)" stroke="#718B9D"/>
+ <rect x="33" y="34" width="45" height="41" rx="2" stroke="#EDF4F8" stroke-opacity=".65"/>
+ <path d="M82 32v45" stroke="#506F83"/>
+ <g fill="#657F92" stroke="#E9F1F6" stroke-width=".6"><circle cx="35" cy="36" r="1.4"/><circle cx="76" cy="73" r="1.4"/></g>
+ <circle cx="54" cy="54" r="14" fill="#718B9E" stroke="#E0EAF1"/>
+ <circle cx="54" cy="54" r="10" fill="url(#physical-freezestat-alarm-metal)" stroke="#557286"/>
+ <path d="M54 46v7" stroke="#496A80" stroke-width="2"/>
+ <path d="m42 44-2-2m14-5v3m11 4 2-2m-28 13h3m24 0h3" stroke="#56768D" stroke-width="1"/>
+ <rect x="65" y="21" width="9" height="6" rx="2" fill="#9C6E62" stroke="#6F6D6D"/>
+ <path d="M43 80h18v4H43Z" fill="#8DA2B2" stroke="#647F93"/>
+ </g></svg>

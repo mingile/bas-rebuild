@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="224" viewBox="0 0 224 224" fill="none" role="img" aria-labelledby="damper-closed-title damper-closed-desc">
+  <title id="damper-closed-title">HVAC 댐퍼 — 닫힘</title>
+  <desc id="damper-closed-desc">코일과 같은 224×224 크기와 우측 사선 구도의 금속 댐퍼. 좁은 앞면과 상단은 매끈한 금속이며 오른쪽 넓은 면에 다섯 장의 댐퍼 날개가 있습니다. 날개가 맞닿아 통로를 막고 있습니다. 배경은 투명합니다.</desc>
+  <defs>
+    <linearGradient id="damper-closed-frame" x1="28" y1="16" x2="134" y2="147" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3F6" />
+      <stop offset=".32" stop-color="#CDD7DE" />
+      <stop offset=".7" stop-color="#A6B6C1" />
+      <stop offset="1" stop-color="#718A9B" />
+    </linearGradient>
+    <linearGradient id="damper-closed-bed" x1="0" y1="24" x2="0" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334A59" />
+      <stop offset=".5" stop-color="#5B707F" />
+      <stop offset="1" stop-color="#3B5465" />
+    </linearGradient>
+    <g id="damper-closed-screw">
+      <circle r="2" fill="#708999" stroke="#E3ECF2" stroke-width=".65" />
+      <path d="M-1 0H1" stroke="#3C596C" stroke-width=".8" />
+    </g>
+    <linearGradient id="damper-closed-side" x1="0" y1="0" x2="1" y2=".7">
+      <stop stop-color="#8BA0AF" />
+      <stop offset=".45" stop-color="#B9C7D1" />
+      <stop offset="1" stop-color="#7C93A4" />
+    </linearGradient>
+    <linearGradient id="damper-closed-top" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#EBF1F5" />
+      <stop offset="1" stop-color="#B4C4D0" />
+    </linearGradient>
+    <linearGradient id="damper-closed-blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3EBF0" />
+      <stop offset=".16" stop-color="#CFDAE2" />
+      <stop offset=".52" stop-color="#ADBEC9" />
+      <stop offset=".88" stop-color="#8DA3B3" />
+      <stop offset="1" stop-color="#607D91" />
+    </linearGradient>
+  </defs>
+  <g id="damper-closed-depth" stroke-linejoin="round">
+    <path d="M74.8 61.2 146.8 21.2 177.6 32.4 105.6 72.4Z" fill="url(#damper-closed-top)" stroke="#7B93A5" stroke-width="1.1" />
+    <path d="M77 61.2 146.8 23.2 174 33" stroke="#F5F8FA" stroke-opacity=".85" />
+    <g transform="matrix(1 -.555556 0 1 105.6 72.4)">
+      <rect width="72" height="129" fill="url(#damper-closed-side)" stroke="#617D90" stroke-width="1.1" />
+      <g id="damper-closed-active-face" transform="matrix(.642857143 0 0 1 -14.7857143 -18)">
+        <g id="damper-closed-housing" stroke-linejoin="round">
+          <rect x="23" y="18" width="112" height="129" rx="3" fill="url(#damper-closed-frame)" stroke="#6D8799" stroke-width="1.2" />
+          <rect x="30" y="24" width="99" height="113" rx="1.5" fill="url(#damper-closed-bed)" stroke="#526D7F" />
+          <path d="M25 20H132M25 21V143" stroke="#F5F8FA" stroke-opacity=".85" />
+          <path d="M31 138H129" stroke="#E3ECF2" stroke-opacity=".6" />
+        </g>
+        <g id="damper-closed-blades" stroke-linejoin="round">
+          <rect x="32" y="26" width="95" height="22" fill="url(#damper-closed-blade)" stroke="#698497" stroke-width=".65" />
+          <path d="M34 27.5H125" stroke="#F0F5F8" stroke-opacity=".8" stroke-width=".9" />
+          <path d="M34 44.5H125" stroke="#657F92" stroke-opacity=".5" stroke-width=".7" />
+          <path d="M33 47H126" stroke="#47697F" stroke-width=".9" />
+          <path d="M34 34H125" stroke="#F3F7FA" stroke-opacity=".12" stroke-width=".55" />
+          <rect x="32" y="48" width="95" height="22" fill="url(#damper-closed-blade)" stroke="#698497" stroke-width=".65" />
+          <path d="M34 49.5H125" stroke="#F0F5F8" stroke-opacity=".8" stroke-width=".9" />
+          <path d="M34 66.5H125" stroke="#657F92" stroke-opacity=".5" stroke-width=".7" />
+          <path d="M33 69H126" stroke="#47697F" stroke-width=".9" />
+          <path d="M34 56H125" stroke="#F3F7FA" stroke-opacity=".12" stroke-width=".55" />
+          <rect x="32" y="70" width="95" height="22" fill="url(#damper-closed-blade)" stroke="#698497" stroke-width=".65" />
+          <path d="M34 71.5H125" stroke="#F0F5F8" stroke-opacity=".8" stroke-width=".9" />
+          <path d="M34 88.5H125" stroke="#657F92" stroke-opacity=".5" stroke-width=".7" />
+          <path d="M33 91H126" stroke="#47697F" stroke-width=".9" />
+          <path d="M34 78H125" stroke="#F3F7FA" stroke-opacity=".12" stroke-width=".55" />
+          <rect x="32" y="92" width="95" height="22" fill="url(#damper-closed-blade)" stroke="#698497" stroke-width=".65" />
+          <path d="M34 93.5H125" stroke="#F0F5F8" stroke-opacity=".8" stroke-width=".9" />
+          <path d="M34 110.5H125" stroke="#657F92" stroke-opacity=".5" stroke-width=".7" />
+          <path d="M33 113H126" stroke="#47697F" stroke-width=".9" />
+          <path d="M34 100H125" stroke="#F3F7FA" stroke-opacity=".12" stroke-width=".55" />
+          <rect x="32" y="114" width="95" height="22" fill="url(#damper-closed-blade)" stroke="#698497" stroke-width=".65" />
+          <path d="M34 115.5H125" stroke="#F0F5F8" stroke-opacity=".8" stroke-width=".9" />
+          <path d="M34 132.5H125" stroke="#657F92" stroke-opacity=".5" stroke-width=".7" />
+          <path d="M33 135H126" stroke="#47697F" stroke-width=".9" />
+          <path d="M34 122H125" stroke="#F3F7FA" stroke-opacity=".12" stroke-width=".55" />
+        </g>
+        <g id="damper-closed-fasteners">
+          <use href="#damper-closed-screw" transform="translate(27 23)" />
+          <use href="#damper-closed-screw" transform="translate(131 23)" />
+          <use href="#damper-closed-screw" transform="translate(27 142)" />
+          <use href="#damper-closed-screw" transform="translate(131 142)" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="damper-closed-plain-face" stroke-linejoin="round" transform="matrix(.5 -.181818182 0 1 52.8 19.2)">
+    <path d="M44 50 105.6 72.4V201.4L44 179.4Z" fill="url(#damper-closed-frame)" stroke="#6D8799" stroke-width="1.1" />
+    <path d="M46 53 103.6 74M46 53V178" stroke="#F5F8FA" stroke-opacity=".8" stroke-width="1" />
+    <path d="M46 178 103.6 198.9V75" stroke="#647F91" stroke-opacity=".45" stroke-width=".9" />
+  </g>
+</svg>

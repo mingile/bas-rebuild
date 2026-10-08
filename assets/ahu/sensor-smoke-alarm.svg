@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="physical-smoke-alarm-title physical-smoke-alarm-desc"><title id="physical-smoke-alarm-title">덕트형 연기 감지기</title><desc id="physical-smoke-alarm-desc">실제 HVAC 장치의 구조를 참고한 제품 형태의 벡터 이미지. 특정 모델의 복제나 설치 도면이 아닙니다. 금속 질감과 투명 배경을 사용합니다.</desc><defs>
+ <linearGradient id="physical-smoke-alarm-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EFF4F7"/><stop offset=".4" stop-color="#C5D2DC"/><stop offset="1" stop-color="#8CA3B4"/></linearGradient>
+ <linearGradient id="physical-smoke-alarm-side" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#B5C6D2"/><stop offset="1" stop-color="#667F92"/></linearGradient>
+ <linearGradient id="physical-smoke-alarm-steel" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#688599"/><stop offset=".28" stop-color="#D9E5ED"/><stop offset=".48" stop-color="#F2F7FA"/><stop offset=".7" stop-color="#A7BCCB"/><stop offset="1" stop-color="#647F93"/></linearGradient>
+ </defs><g stroke-linecap="round" stroke-linejoin="round"><g>
+ <g><rect x="73" y="67" width="8" height="72" rx="3" fill="url(#physical-smoke-alarm-steel)" stroke="#728DA0"/>
+ <rect x="105" y="67" width="8" height="24" rx="3" fill="url(#physical-smoke-alarm-steel)" stroke="#728DA0"/><ellipse cx="77" cy="87" rx="1.5" ry="1.1" fill="#344F62"/><ellipse cx="77" cy="96" rx="1.5" ry="1.1" fill="#344F62"/><ellipse cx="77" cy="105" rx="1.5" ry="1.1" fill="#344F62"/><ellipse cx="77" cy="114" rx="1.5" ry="1.1" fill="#344F62"/><ellipse cx="77" cy="123" rx="1.5" ry="1.1" fill="#344F62"/><ellipse cx="77" cy="132" rx="1.5" ry="1.1" fill="#344F62"/></g><path d="M28 32l8-6h91v43l-8 6Z" fill="url(#physical-smoke-alarm-side)" stroke="#607D90"/>
+ <path d="M28 32l8-6h91l-8 6Z" fill="#E4EDF3" stroke="#8CA3B3"/>
+ <rect x="28" y="32" width="91" height="43" rx="3" fill="url(#physical-smoke-alarm-metal)" stroke="#718B9D"/>
+ <rect x="32" y="36" width="83" height="35" rx="2" stroke="#EDF4F8" stroke-opacity=".65"/>
+ <path d="M119 34v39" stroke="#506F83"/>
+ <g fill="#657F92" stroke="#E9F1F6" stroke-width=".6"><circle cx="34" cy="38" r="1.4"/><circle cx="113" cy="69" r="1.4"/></g>
+ <rect x="33" y="37" width="81" height="32" rx="3" fill="#657D8C" stroke="#D6E3EC"/>
+ <ellipse cx="60" cy="55" rx="19" ry="12" fill="#3E5768"/>
+ <ellipse cx="59" cy="51" rx="17" ry="11" fill="#A6B9C6" stroke="#E2ECF2"/>
+ <ellipse cx="59" cy="49" rx="12" ry="7" fill="#C6D4DE"/>
+ <path d="M45 53v5m5-3v6m6-5v6m6-6v5m6-7v5" stroke="#405E72" stroke-width="2"/>
+ <rect x="84" y="43" width="21" height="19" rx="2" fill="#8FA5B4" stroke="#BFCFD9"/>
+ <path d="M88 47h13m-13 4h13m-13 4h8" stroke="#526F82" stroke-width="1"/>
+ <path d="M35 39h77v28H35Z" fill="#C8E1EF" fill-opacity=".14" stroke="#E5F0F7" stroke-opacity=".75"/>
+ <path d="m38 40 15 0-13 25h-3Z" fill="#F3FAFF" fill-opacity=".18"/>
+ </g></g></svg>

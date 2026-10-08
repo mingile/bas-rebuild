@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="224" viewBox="0 0 224 224" fill="none" role="img" aria-labelledby="damper-open-title damper-open-desc">
+  <title id="damper-open-title">HVAC 댐퍼 — 열림</title>
+  <desc id="damper-open-desc">코일과 같은 224×224 크기와 우측 사선 구도의 금속 댐퍼. 좁은 앞면과 상단은 매끈한 금속이며 오른쪽 넓은 면에 다섯 장의 댐퍼 날개가 있습니다. 날개가 열려 어두운 내부 통로가 넓게 보입니다. 배경은 투명합니다.</desc>
+  <defs>
+    <linearGradient id="damper-open-frame" x1="28" y1="16" x2="134" y2="147" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3F6" />
+      <stop offset=".32" stop-color="#CDD7DE" />
+      <stop offset=".7" stop-color="#A6B6C1" />
+      <stop offset="1" stop-color="#718A9B" />
+    </linearGradient>
+    <linearGradient id="damper-open-bed" x1="0" y1="24" x2="0" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334A59" />
+      <stop offset=".5" stop-color="#5B707F" />
+      <stop offset="1" stop-color="#3B5465" />
+    </linearGradient>
+    <g id="damper-open-screw">
+      <circle r="2" fill="#708999" stroke="#E3ECF2" stroke-width=".65" />
+      <path d="M-1 0H1" stroke="#3C596C" stroke-width=".8" />
+    </g>
+    <linearGradient id="damper-open-side" x1="0" y1="0" x2="1" y2=".7">
+      <stop stop-color="#8BA0AF" />
+      <stop offset=".45" stop-color="#B9C7D1" />
+      <stop offset="1" stop-color="#7C93A4" />
+    </linearGradient>
+    <linearGradient id="damper-open-top" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#EBF1F5" />
+      <stop offset="1" stop-color="#B4C4D0" />
+    </linearGradient>
+    <linearGradient id="damper-open-blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3EBF0" />
+      <stop offset=".16" stop-color="#CFDAE2" />
+      <stop offset=".52" stop-color="#ADBEC9" />
+      <stop offset=".88" stop-color="#8DA3B3" />
+      <stop offset="1" stop-color="#607D91" />
+    </linearGradient>
+  </defs>
+  <g id="damper-open-depth" stroke-linejoin="round">
+    <path d="M74.8 61.2 146.8 21.2 177.6 32.4 105.6 72.4Z" fill="url(#damper-open-top)" stroke="#7B93A5" stroke-width="1.1" />
+    <path d="M77 61.2 146.8 23.2 174 33" stroke="#F5F8FA" stroke-opacity=".85" />
+    <g transform="matrix(1 -.555556 0 1 105.6 72.4)">
+      <rect width="72" height="129" fill="url(#damper-open-side)" stroke="#617D90" stroke-width="1.1" />
+      <g id="damper-open-active-face" transform="matrix(.642857143 0 0 1 -14.7857143 -18)">
+        <g id="damper-open-housing" stroke-linejoin="round">
+          <rect x="23" y="18" width="112" height="129" rx="3" fill="url(#damper-open-frame)" stroke="#6D8799" stroke-width="1.2" />
+          <rect x="30" y="24" width="99" height="113" rx="1.5" fill="url(#damper-open-bed)" stroke="#526D7F" />
+          <path d="M25 20H132M25 21V143" stroke="#F5F8FA" stroke-opacity=".85" />
+          <path d="M31 138H129" stroke="#E3ECF2" stroke-opacity=".6" />
+        </g>
+        <g id="damper-open-blades" stroke-linejoin="round">
+          <path d="M32 26H127V136H32Z" fill="#263E4D" />
+          <path d="M32 26H127L122 32H37Z" fill="#142D3E" fill-opacity=".8" />
+          <path d="M122 32 127 26V136L122 131Z" fill="#657E8F" />
+          <path d="M32 136H127L122 131H37Z" fill="#8399A9" />
+          <path d="M33 38H126V42H33Z" fill="#142C3C" fill-opacity=".7" />
+          <path d="M33 36 39 30H126L120 36Z" fill="url(#damper-open-blade)" stroke="#6B8799" stroke-width=".65" />
+          <path d="M33 36H120V38.8H33Z" fill="#91A8B8" stroke="#577589" stroke-width=".6" />
+          <path d="M34 36.3H119" stroke="#ECF3F7" stroke-opacity=".85" stroke-width=".8" />
+          <path d="M120 36 126 30V32.8L120 38.8Z" fill="#5C798C" />
+          <circle cx="33" cy="36" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <circle cx="126" cy="36" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <path d="M33 60H126V64H33Z" fill="#142C3C" fill-opacity=".7" />
+          <path d="M33 58 39 52H126L120 58Z" fill="url(#damper-open-blade)" stroke="#6B8799" stroke-width=".65" />
+          <path d="M33 58H120V60.8H33Z" fill="#91A8B8" stroke="#577589" stroke-width=".6" />
+          <path d="M34 58.3H119" stroke="#ECF3F7" stroke-opacity=".85" stroke-width=".8" />
+          <path d="M120 58 126 52V54.8L120 60.8Z" fill="#5C798C" />
+          <circle cx="33" cy="58" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <circle cx="126" cy="58" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <path d="M33 82H126V86H33Z" fill="#142C3C" fill-opacity=".7" />
+          <path d="M33 80 39 74H126L120 80Z" fill="url(#damper-open-blade)" stroke="#6B8799" stroke-width=".65" />
+          <path d="M33 80H120V82.8H33Z" fill="#91A8B8" stroke="#577589" stroke-width=".6" />
+          <path d="M34 80.3H119" stroke="#ECF3F7" stroke-opacity=".85" stroke-width=".8" />
+          <path d="M120 80 126 74V76.8L120 82.8Z" fill="#5C798C" />
+          <circle cx="33" cy="80" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <circle cx="126" cy="80" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <path d="M33 104H126V108H33Z" fill="#142C3C" fill-opacity=".7" />
+          <path d="M33 102 39 96H126L120 102Z" fill="url(#damper-open-blade)" stroke="#6B8799" stroke-width=".65" />
+          <path d="M33 102H120V104.8H33Z" fill="#91A8B8" stroke="#577589" stroke-width=".6" />
+          <path d="M34 102.3H119" stroke="#ECF3F7" stroke-opacity=".85" stroke-width=".8" />
+          <path d="M120 102 126 96V98.8L120 104.8Z" fill="#5C798C" />
+          <circle cx="33" cy="102" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <circle cx="126" cy="102" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <path d="M33 126H126V130H33Z" fill="#142C3C" fill-opacity=".7" />
+          <path d="M33 124 39 118H126L120 124Z" fill="url(#damper-open-blade)" stroke="#6B8799" stroke-width=".65" />
+          <path d="M33 124H120V126.8H33Z" fill="#91A8B8" stroke="#577589" stroke-width=".6" />
+          <path d="M34 124.3H119" stroke="#ECF3F7" stroke-opacity=".85" stroke-width=".8" />
+          <path d="M120 124 126 118V120.8L120 126.8Z" fill="#5C798C" />
+          <circle cx="33" cy="124" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+          <circle cx="126" cy="124" r="1.65" fill="#A3B7C5" stroke="#47677D" stroke-width=".6" />
+        </g>
+        <g id="damper-open-fasteners">
+          <use href="#damper-open-screw" transform="translate(27 23)" />
+          <use href="#damper-open-screw" transform="translate(131 23)" />
+          <use href="#damper-open-screw" transform="translate(27 142)" />
+          <use href="#damper-open-screw" transform="translate(131 142)" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="damper-open-plain-face" stroke-linejoin="round" transform="matrix(.5 -.181818182 0 1 52.8 19.2)">
+    <path d="M44 50 105.6 72.4V201.4L44 179.4Z" fill="url(#damper-open-frame)" stroke="#6D8799" stroke-width="1.1" />
+    <path d="M46 53 103.6 74M46 53V178" stroke="#F5F8FA" stroke-opacity=".8" stroke-width="1" />
+    <path d="M46 178 103.6 198.9V75" stroke="#647F91" stroke-opacity=".45" stroke-width=".9" />
+  </g>
+</svg>

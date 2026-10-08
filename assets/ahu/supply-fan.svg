@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="208" viewBox="0 0 240 208" fill="none" role="img" aria-labelledby="sf-title sf-desc">
+  <title id="sf-title">Supply Fan — 원심식 급기 팬</title>
+  <desc id="sf-desc">사각 토출부가 왼쪽 위로 이어지는 원심식 팬의 정면. 둥근 흡입구 안에 방사형 날개와 중앙 축이 보이고 오른쪽에는 작은 장치함, 아래에는 지지대와 받침판이 있습니다. 회청색 금속 명암을 사용하며 배경은 투명합니다.</desc>
+  <defs>
+    <linearGradient id="sf-body" x1="35" y1="17" x2="179" y2="177" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DFE6EB"/><stop offset=".36" stop-color="#C0CBD3"/><stop offset=".7" stop-color="#AAB8C2"/><stop offset="1" stop-color="#8398A7"/>
+    </linearGradient>
+    <linearGradient id="sf-depth" x1="115" y1="8" x2="189" y2="169" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF3F6"/><stop offset=".35" stop-color="#BBC8D1"/><stop offset="1" stop-color="#536C7D"/>
+    </linearGradient>
+    <linearGradient id="sf-ring" x1="65" y1="59" x2="159" y2="159" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4EBF0"/><stop offset=".32" stop-color="#B5C2CC"/><stop offset=".68" stop-color="#94A6B3"/><stop offset="1" stop-color="#D6DFE5"/>
+    </linearGradient>
+    <linearGradient id="sf-lip" x1="77" y1="66" x2="140" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B6272"/><stop offset=".5" stop-color="#7F929F"/><stop offset="1" stop-color="#EDF2F5"/>
+    </linearGradient>
+    <radialGradient id="sf-cavity" cx=".42" cy=".4" r=".64">
+      <stop stop-color="#536672"/><stop offset=".5" stop-color="#354B59"/><stop offset="1" stop-color="#1C303C"/>
+    </radialGradient>
+    <linearGradient id="sf-blade-metal" x1="104" y1="65" x2="128" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9CAEBB"/><stop offset=".3" stop-color="#667F90"/><stop offset=".8" stop-color="#3D5666"/><stop offset="1" stop-color="#A0B1BD"/>
+    </linearGradient>
+    <linearGradient id="sf-hub" x1="96" y1="92" x2="125" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1F5F7"/><stop offset=".3" stop-color="#C8D4DC"/><stop offset=".75" stop-color="#8FA4B2"/><stop offset="1" stop-color="#5F798A"/>
+    </linearGradient>
+    <linearGradient id="sf-foot" x1="0" y1="172" x2="0" y2="191" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E3EBF0"/><stop offset=".42" stop-color="#BDC9D2"/><stop offset=".55" stop-color="#99ACBA"/><stop offset="1" stop-color="#6C8393"/>
+    </linearGradient>
+    <linearGradient id="sf-box" x1="187" y1="75" x2="210" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5B7C4"/><stop offset=".5" stop-color="#8CA1B0"/><stop offset="1" stop-color="#617B8D"/>
+    </linearGradient>
+    <pattern id="sf-grain" width="16" height="12" patternUnits="userSpaceOnUse">
+      <path d="M1 2H7M9 8H15M3 11H6" stroke="#F3F7FA" stroke-opacity=".12" stroke-width=".55"/>
+      <path d="M6 5H12M0 9H3" stroke="#456071" stroke-opacity=".08" stroke-width=".5"/>
+      <circle cx="11" cy="2" r=".45" fill="#F2F6F8" fill-opacity=".18"/>
+    </pattern>
+    <path id="sf-scroll-shape" d="M21 112V15H119C161 15 191 43 194 82V113C194 148 164 177 127 177H49V112Z"/>
+    <g id="sf-blade">
+      <path d="M108 94C104 84 99 76 99 64L106 63C105 74 110 83 115 92Z" fill="url(#sf-blade-metal)" stroke="#283F4D" stroke-width=".7"/>
+      <path d="M106 64C105 75 110 84 114 91" stroke="#C6D4DD" stroke-opacity=".58" stroke-width="1"/>
+    </g>
+    <g id="sf-bolt">
+      <circle cx="110" cy="54.5" r="1.55" fill="#718A9B" stroke="#E7EEF3" stroke-width=".65"/>
+      <path d="M109.4 54.5H110.6" stroke="#3E596A" stroke-width=".6"/>
+    </g>
+  </defs>
+  <!-- Base and mounting feet behind the scroll housing. -->
+  <g id="sf-mount" stroke-linejoin="round">
+    <path d="M42 145H56V179H42Z" fill="#768E9F" stroke="#536D7E"/>
+    <path d="M44 148H48V177H44Z" fill="#CAD6DF"/>
+    <path d="M173 141H191V178H173Z" fill="#617B8D" stroke="#4E687A"/>
+    <path d="M185 143H190V177H185Z" fill="#B7C6D1"/>
+    <path d="M31 180 42 173H208L199 180Z" fill="#DEE6EC" stroke="#8096A6"/>
+    <path d="M31 180H199V190H31Z" fill="url(#sf-foot)" stroke="#708898"/>
+    <path d="M199 180 208 173V183L199 190Z" fill="#7D95A5" stroke="#617B8D"/>
+    <path d="M33 181H197" stroke="#F5F8FA" stroke-opacity=".8"/>
+    <ellipse cx="43" cy="184" rx="2.3" ry="1.2" fill="#536D7E"/>
+    <ellipse cx="187" cy="184" rx="2.3" ry="1.2" fill="#536D7E"/>
+  </g>
+  <!-- Broad rectangular discharge transitions into the rounded centrifugal scroll. -->
+  <g id="sf-scroll" stroke-linejoin="round">
+    <use href="#sf-scroll-shape" transform="translate(5 -5)" fill="url(#sf-depth)" stroke="#758B9A" stroke-width="1.2"/>
+    <use href="#sf-scroll-shape" fill="url(#sf-body)" stroke="#6F8797" stroke-width="1.2"/>
+    <use href="#sf-scroll-shape" fill="url(#sf-grain)"/>
+    <path d="M23 109V17H119C159 17 188 44 192 81" stroke="#F3F7F9" stroke-opacity=".9" stroke-width="1.6"/>
+    <path d="M21 15 26 10H124" stroke="#F7FAFC" stroke-width="1.3"/>
+    <path d="M16 15 21 12V112H16Z" fill="#A6B7C3" stroke="#6E8798"/>
+    <path d="M17.5 17V109" stroke="#EEF3F7" stroke-width="1.2"/>
+    <path d="M53 173H127C157 173 182 152 188 129" stroke="#738C9D" stroke-opacity=".65"/>
+  </g>
+  <!-- Recessed inlet and visible impeller. -->
+  <g id="sf-inlet">
+    <circle cx="110" cy="109" r="59" fill="url(#sf-ring)" stroke="#6F8696" stroke-width="1.2"/>
+    <circle cx="110" cy="109" r="57.3" stroke="#EFF4F7" stroke-opacity=".72" stroke-width=".8"/>
+    <circle cx="110" cy="109" r="48.8" fill="url(#sf-lip)"/>
+    <circle cx="110" cy="109" r="46" fill="url(#sf-cavity)" stroke="#3C5667" stroke-width=".8"/>
+    <circle cx="110" cy="109" r="39" stroke="#7B919F" stroke-opacity=".18" stroke-width="1.5"/>
+    <g id="sf-impeller">
+      <use href="#sf-blade"/><use href="#sf-blade" transform="rotate(30 110 109)"/>
+      <use href="#sf-blade" transform="rotate(60 110 109)"/><use href="#sf-blade" transform="rotate(90 110 109)"/>
+      <use href="#sf-blade" transform="rotate(120 110 109)"/><use href="#sf-blade" transform="rotate(150 110 109)"/>
+      <use href="#sf-blade" transform="rotate(180 110 109)"/><use href="#sf-blade" transform="rotate(210 110 109)"/>
+      <use href="#sf-blade" transform="rotate(240 110 109)"/><use href="#sf-blade" transform="rotate(270 110 109)"/>
+      <use href="#sf-blade" transform="rotate(300 110 109)"/><use href="#sf-blade" transform="rotate(330 110 109)"/>
+    </g>
+    <ellipse cx="111.5" cy="111" rx="18.2" ry="17.5" fill="#172D3B" fill-opacity=".55"/>
+    <circle cx="110" cy="109" r="17" fill="url(#sf-hub)" stroke="#657F90"/>
+    <circle cx="110" cy="109" r="14.5" stroke="#E7EFF4" stroke-opacity=".5" stroke-width=".8"/>
+    <circle cx="110" cy="109" r="6.2" fill="#6D8798" stroke="#E3ECF2" stroke-width="1.2"/>
+    <path d="m110 105 3.5 2v4l-3.5 2-3.5-2v-4Z" fill="#B9CBD7" stroke="#536F82" stroke-width=".65"/>
+    <g id="sf-inlet-bolts">
+      <use href="#sf-bolt"/><use href="#sf-bolt" transform="rotate(45 110 109)"/>
+      <use href="#sf-bolt" transform="rotate(90 110 109)"/><use href="#sf-bolt" transform="rotate(135 110 109)"/>
+      <use href="#sf-bolt" transform="rotate(180 110 109)"/><use href="#sf-bolt" transform="rotate(225 110 109)"/>
+      <use href="#sf-bolt" transform="rotate(270 110 109)"/><use href="#sf-bolt" transform="rotate(315 110 109)"/>
+    </g>
+  </g>
+  <!-- Side-mounted equipment enclosure and its shallow beveled cover. -->
+  <g id="sf-side-box" stroke-linejoin="round">
+    <path d="M191 76 197 69H219L213 76Z" fill="#D7E1E8" stroke="#6C8597"/>
+    <path d="M213 76 219 69V121L213 128Z" fill="#546F82" stroke="#486476"/>
+    <path d="M191 76H213V128H191Z" fill="url(#sf-box)" stroke="#4F6A7C"/>
+    <path d="M194 79H210V124H194Z" stroke="#B7C7D3" stroke-opacity=".58"/>
+    <path d="M193 77H211M192 79V125" stroke="#E6EEF3" stroke-opacity=".75"/>
+    <path d="M197 82H206M197 121H206" stroke="#486677" stroke-width="1.2"/>
+    <circle cx="208" cy="82" r="1" fill="#3E5B6D"/>
+    <circle cx="208" cy="121" r="1" fill="#3E5B6D"/>
+  </g>
+</svg>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="432" viewBox="0 0 640 432" fill="none" role="img" aria-labelledby="dt-title dt-desc">
+  <title id="dt-title">내부가 열린 T자 HVAC 덕트 연결부</title>
+  <desc id="dt-desc">윗면을 제거한 T자 덕트. 좌우와 위쪽의 세 연결부가 열려 있고, 중앙 내부에 가로막는 벽이 없어 센서와 설비를 배치할 수 있습니다. 기존 수평·수직 덕트와 같은 폭과 금속 질감을 사용하며 바깥 배경은 투명합니다.</desc>
+  <defs>
+
+    <linearGradient id="dt-h-floor" x1="0" y1="54" x2="0" y2="172" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 208)">
+      <stop stop-color="#4B5A65"/>
+      <stop offset=".18" stop-color="#64737E"/>
+      <stop offset=".52" stop-color="#707F89"/>
+      <stop offset=".85" stop-color="#687782"/>
+      <stop offset="1" stop-color="#52636F"/>
+    </linearGradient>
+    <linearGradient id="dt-h-back-wall" x1="0" y1="32" x2="0" y2="56" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 208)">
+      <stop stop-color="#8899A5"/>
+      <stop offset=".4" stop-color="#596C79"/>
+      <stop offset="1" stop-color="#344752"/>
+    </linearGradient>
+    <linearGradient id="dt-h-front-wall" x1="0" y1="170" x2="0" y2="192" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 208)">
+      <stop stop-color="#8495A1"/>
+      <stop offset=".7" stop-color="#ADBBC5"/>
+      <stop offset="1" stop-color="#D5DEE4"/>
+    </linearGradient>
+    <linearGradient id="dt-h-back-rim" x1="0" y1="20" x2="0" y2="33" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 208)">
+      <stop stop-color="#A6B4BE"/>
+      <stop offset=".28" stop-color="#F0F4F6"/>
+      <stop offset=".65" stop-color="#D0D9DF"/>
+      <stop offset="1" stop-color="#94A5B1"/>
+    </linearGradient>
+    <linearGradient id="dt-h-front-rim" x1="0" y1="191" x2="0" y2="204" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 208)">
+      <stop stop-color="#EEF3F6"/>
+      <stop offset=".3" stop-color="#CDD7DE"/>
+      <stop offset=".75" stop-color="#98AAB7"/>
+      <stop offset="1" stop-color="#738896"/>
+    </linearGradient>
+    <pattern id="dt-h-brush" width="80" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H48M28 5H80" stroke="#EDF3F7" stroke-opacity=".045" stroke-width=".6"/>
+      <path d="M8 3H62M0 7H26" stroke="#192E3D" stroke-opacity=".035" stroke-width=".6"/>
+    </pattern>
+  
+    <linearGradient id="dt-v-floor" x1="0" y1="54" x2="0" y2="172" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#4B5A65"/>
+      <stop offset=".18" stop-color="#64737E"/>
+      <stop offset=".52" stop-color="#707F89"/>
+      <stop offset=".85" stop-color="#687782"/>
+      <stop offset="1" stop-color="#52636F"/>
+    </linearGradient>
+    <linearGradient id="dt-v-back-wall" x1="0" y1="32" x2="0" y2="56" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#8899A5"/>
+      <stop offset=".4" stop-color="#596C79"/>
+      <stop offset="1" stop-color="#344752"/>
+    </linearGradient>
+    <linearGradient id="dt-v-front-wall" x1="0" y1="170" x2="0" y2="192" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#8495A1"/>
+      <stop offset=".7" stop-color="#ADBBC5"/>
+      <stop offset="1" stop-color="#D5DEE4"/>
+    </linearGradient>
+    <linearGradient id="dt-v-back-rim" x1="0" y1="20" x2="0" y2="33" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#A6B4BE"/>
+      <stop offset=".28" stop-color="#F0F4F6"/>
+      <stop offset=".65" stop-color="#D0D9DF"/>
+      <stop offset="1" stop-color="#94A5B1"/>
+    </linearGradient>
+    <linearGradient id="dt-v-front-rim" x1="0" y1="191" x2="0" y2="204" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -1 1 0 208 640)">
+      <stop stop-color="#EEF3F6"/>
+      <stop offset=".3" stop-color="#CDD7DE"/>
+      <stop offset=".75" stop-color="#98AAB7"/>
+      <stop offset="1" stop-color="#738896"/>
+    </linearGradient>
+    <pattern id="dt-v-brush" width="80" height="8" patternUnits="userSpaceOnUse" patternTransform="matrix(0 -1 1 0 208 640)">
+      <path d="M0 1H48M28 5H80" stroke="#EDF3F7" stroke-opacity=".045" stroke-width=".6"/>
+      <path d="M8 3H62M0 7H26" stroke="#192E3D" stroke-opacity=".035" stroke-width=".6"/>
+    </pattern>
+  
+    <linearGradient id="dt-blend" x1="0" y1="160" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/><stop offset="1" stop-color="black"/>
+    </linearGradient>
+    <mask id="dt-branch-blend" x="240" y="0" width="160" height="300" maskUnits="userSpaceOnUse">
+      <path d="M240 0H400V300H240Z" fill="url(#dt-blend)"/>
+    </mask>
+  </defs>
+  <!-- Matching ports: left (0,320), right (640,320), top (320,0).
+       Each port has the same 224-unit envelope and 184-unit metal width as the straight assets. -->
+  <g id="dt-interior">
+    <path d="M240 0H400V240H640V400H0V240H240Z" fill="url(#dt-h-floor)"/>
+    <path d="M240 0H400V300H240Z" fill="url(#dt-v-floor)" mask="url(#dt-branch-blend)"/>
+    <path d="M264 0H378V264H640V378H0V264H264Z" fill="url(#dt-h-brush)"/>
+  </g>
+  <!-- Interior walls follow the outside contour only; the junction stays open. -->
+  <g id="dt-inner-walls">
+    <path d="M0 240H240L264 264H0Z" fill="url(#dt-h-back-wall)"/>
+    <path d="M240 0H264V264L240 240Z" fill="url(#dt-v-back-wall)"/>
+    <path d="M378 0H400V240L378 264Z" fill="url(#dt-v-front-wall)"/>
+    <path d="M400 240H640V264H378Z" fill="url(#dt-h-back-wall)"/>
+    <path d="M0 378H640V400H0Z" fill="url(#dt-h-front-wall)"/>
+    <path d="M0 264H264V0M378 264H640" stroke="#213640" stroke-opacity=".48" stroke-width="1.5"/>
+    <path d="M378 0V264M0 378H640" stroke="#D6E1E7" stroke-opacity=".38"/>
+    <path d="M241 241 264 264M399 241 378 264" stroke="#314956" stroke-opacity=".24"/>
+  </g>
+  <g id="dt-metal-rims">
+    <path d="M0 228H228L241 241H0Z" fill="url(#dt-h-back-rim)"/>
+    <path d="M228 0H241V241L228 228Z" fill="url(#dt-v-back-rim)"/>
+    <path d="M399 0H412V228L399 241Z" fill="url(#dt-v-front-rim)"/>
+    <path d="M412 228H640V241H399Z" fill="url(#dt-h-back-rim)"/>
+    <path d="M0 399H640V412H0Z" fill="url(#dt-h-front-rim)"/>
+    <path d="M0 228.5H228.5V0M411.5 0V228.5H640M0 411.5H640" stroke="#657C8C"/>
+    <path d="M0 231H231V0M400 0V231H640M0 400H640" stroke="#FFF" stroke-opacity=".8"/>
+    <path d="M0 241H241V0M399 241H640" stroke="#334B5B" stroke-opacity=".6"/>
+    <path d="M399 0V239" stroke="#F2F6F8" stroke-opacity=".5"/>
+    <path d="M228 228 241 241M412 228 399 241" stroke="#617989" stroke-opacity=".32"/>
+    <path d="M112 229V241M528 229V241M112 400V411M528 400V411M229 112H241M400 112H411" stroke="#617989" stroke-opacity=".4"/>
+    <path d="M114 229V240M530 229V240M114 401V410M530 401V410M229 114H240M401 114H410" stroke="#FFF" stroke-opacity=".55"/>
+  </g>
+  <!-- Place equipment above this SVG; the center (320,320) is unobstructed. -->
+</svg>

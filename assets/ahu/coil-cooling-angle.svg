@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="224" viewBox="0 0 224 224" fill="none" role="img" aria-labelledby="coil-cooling-angle-title coil-cooling-angle-desc">
+  <title id="coil-cooling-angle-title">HVAC 코일 — 쿨링 가동, 우측 사선 구도</title>
+  <desc id="coil-cooling-angle-desc">쿨링 가동 상태의 코일. 확정된 사선 구도와 좁은 금속 벽면을 유지하고 오른쪽 면의 핀과 배관에 상태 색상을 적용했습니다. 배경은 투명합니다.</desc>
+  <defs>
+    <linearGradient id="coil-cooling-angle-frame" x1="28" y1="16" x2="134" y2="147" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3F6" />
+      <stop offset=".32" stop-color="#CDD7DE" />
+      <stop offset=".7" stop-color="#A6B6C1" />
+      <stop offset="1" stop-color="#718A9B" />
+    </linearGradient>
+    <linearGradient id="coil-cooling-angle-bed" x1="0" y1="24" x2="0" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334A59" />
+      <stop offset=".5" stop-color="#5B707F" />
+      <stop offset="1" stop-color="#3B5465" />
+    </linearGradient>
+    <linearGradient id="coil-cooling-angle-fin" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#637F91" />
+      <stop offset=".32" stop-color="#D5EAF2" />
+      <stop offset=".65" stop-color="#9CB8C8" />
+      <stop offset="1" stop-color="#637F91" />
+    </linearGradient>
+    <linearGradient id="coil-cooling-angle-pipe" x1="0" y1="30" x2="0" y2="130" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D5F4FF" />
+      <stop offset=".32" stop-color="#74C3E4" />
+      <stop offset=".7" stop-color="#74C3E4" />
+      <stop offset="1" stop-color="#337B9F" />
+    </linearGradient>
+    <path id="coil-cooling-angle-tube" d="M16 36H112C128 36 128 58 112 58H48C32 58 32 80 48 80H112C128 80 128 102 112 102H48C32 102 32 124 48 124H144" />
+    <g id="coil-cooling-angle-screw">
+      <circle r="2" fill="#708999" stroke="#E3ECF2" stroke-width=".65" />
+      <path d="M-1 0H1" stroke="#3C596C" stroke-width=".8" />
+    </g>
+    <linearGradient id="coil-cooling-angle-side" x1="0" y1="0" x2="1" y2=".7">
+      <stop stop-color="#8BA0AF" />
+      <stop offset=".45" stop-color="#B9C7D1" />
+      <stop offset="1" stop-color="#7C93A4" />
+    </linearGradient>
+    <linearGradient id="coil-cooling-angle-top" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#EBF1F5" />
+      <stop offset="1" stop-color="#B4C4D0" />
+    </linearGradient>
+  </defs>
+  <g id="coil-cooling-angle-depth" stroke-linejoin="round">
+    <path d="M74.8 61.2 146.8 21.2 177.6 32.4 105.6 72.4Z" fill="url(#coil-cooling-angle-top)" stroke="#7B93A5" stroke-width="1.1" />
+    <path d="M77 61.2 146.8 23.2 174 33" stroke="#F5F8FA" stroke-opacity=".85" />
+    <g transform="matrix(1 -.555556 0 1 105.6 72.4)">
+      <rect width="72" height="129" fill="url(#coil-cooling-angle-side)" stroke="#617D90" stroke-width="1.1" />
+      <g id="coil-cooling-angle-active-face" transform="matrix(.642857143 0 0 1 -14.7857143 -18)">
+        <g id="coil-cooling-angle-housing" stroke-linejoin="round">
+          <rect x="23" y="18" width="112" height="129" rx="3" fill="url(#coil-cooling-angle-frame)" stroke="#6D8799" stroke-width="1.2" />
+          <rect x="30" y="24" width="99" height="113" rx="1.5" fill="url(#coil-cooling-angle-bed)" stroke="#526D7F" />
+          <path d="M25 20H132M25 21V143" stroke="#F5F8FA" stroke-opacity=".85" />
+          <path d="M31 138H129" stroke="#E3ECF2" stroke-opacity=".6" />
+        </g>
+        <g id="coil-cooling-angle-fins">
+          <rect x="34" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M34.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="40" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M40.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="46" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M46.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="52" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M52.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="58" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M58.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="64" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M64.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="70" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M70.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="76" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M76.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="82" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M82.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="88" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M88.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="94" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M94.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="100" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M100.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="106" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M106.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="112" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M112.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="118" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M118.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="124" y="26" width="4" height="108" rx=".7" fill="url(#coil-cooling-angle-fin)" />
+          <path d="M124.7 28V132" stroke="#F3F7FA" stroke-opacity=".35" stroke-width=".6" />
+          <rect x="31" y="25" width="97" height="111" fill="#5BADD1" fill-opacity=".16" />
+          <path d="M32 48H128M32 70H128M32 92H128M32 114H128" stroke="#233F52" stroke-opacity=".16" stroke-width=".7" />
+        </g>
+        <g id="coil-cooling-angle-tubing" stroke-linecap="round" stroke-linejoin="round">
+          <use href="#coil-cooling-angle-tube" transform="translate(0 1.6)" stroke="#203A4B" stroke-opacity=".5" stroke-width="7" />
+          <use href="#coil-cooling-angle-tube" stroke="#337B9F" stroke-width="6.5" />
+          <use href="#coil-cooling-angle-tube" stroke="url(#coil-cooling-angle-pipe)" stroke-width="4.6" />
+          <use href="#coil-cooling-angle-tube" transform="translate(0 -.85)" stroke="#D5F4FF" stroke-opacity=".65" stroke-width="1.15" />
+        </g>
+        <g id="coil-cooling-angle-couplings">
+          <rect x="15" y="31" width="8" height="10" rx="1" fill="url(#coil-cooling-angle-frame)" stroke="#627E91" stroke-width=".8" />
+          <path d="M17 32V40M21 32V40" stroke="#F0F5F8" stroke-opacity=".65" stroke-width=".7" />
+          <rect x="137" y="119" width="8" height="10" rx="1" fill="url(#coil-cooling-angle-frame)" stroke="#627E91" stroke-width=".8" />
+          <path d="M139 120V128M143 120V128" stroke="#F0F5F8" stroke-opacity=".65" stroke-width=".7" />
+        </g>
+        <g id="coil-cooling-angle-fasteners">
+          <use href="#coil-cooling-angle-screw" transform="translate(27 23)" />
+          <use href="#coil-cooling-angle-screw" transform="translate(131 23)" />
+          <use href="#coil-cooling-angle-screw" transform="translate(27 142)" />
+          <use href="#coil-cooling-angle-screw" transform="translate(131 142)" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="coil-cooling-angle-plain-face" stroke-linejoin="round" transform="matrix(.5 -.181818182 0 1 52.8 19.2)">
+    <path d="M44 50 105.6 72.4V201.4L44 179.4Z" fill="url(#coil-cooling-angle-frame)" stroke="#6D8799" stroke-width="1.1" />
+    <path d="M46 53 103.6 74M46 53V178" stroke="#F5F8FA" stroke-opacity=".8" stroke-width="1" />
+    <path d="M46 178 103.6 198.9V75" stroke="#647F91" stroke-opacity=".45" stroke-width=".9" />
+  </g>
+</svg>
