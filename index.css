@@ -104,6 +104,16 @@ nav a {
   border-radius: 12px;
   font-size: 14px;
 }
+nav a.nav-sub {
+  margin-left: 14px;
+  padding: 5px 10px;
+  border-left: 2px solid var(--line);
+  border-radius: 0 10px 10px 0;
+  font-size: 13px;
+}
+nav a.nav-sub.active {
+  border-left-color: var(--accent);
+}
 nav a small {
   display: block;
   font-size: 11px;
@@ -526,6 +536,130 @@ a.pill:hover {
   .detail-col li.flash {
     animation-duration: 0.01s;
     background: color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+}
+
+/* 사이드바 하위 메뉴로 이동할 때 소제목이 화면 위에서 조금 내려온 위치에 오게 한다.
+   (섹션 맨 끝 소제목이 맨 위에 붙으면 다음 섹션이 함께 올라와 메뉴 표시가 다음 섹션으로 넘어간다) */
+.sub-head[id] {
+  scroll-margin-top: 120px;
+}
+
+/* ── 외부 데모(Daily Set, 해커톤) ───── */
+.ext-demo {
+  margin: 22px 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+}
+.ext-demo__frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #0d1311;
+}
+/* 모바일 앱은 휴대폰 크기 프레임으로 가운데에 */
+.ext-demo[data-device="mobile"] .ext-demo__frame {
+  aspect-ratio: auto;
+  height: 720px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.ext-demo__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+.ext-demo[data-device="mobile"] .ext-demo__frame iframe {
+  /* 휴대폰 폭 그대로 렌더링한다. 데스크톱 iframe은 스크롤바가 폭을 차지하므로
+     390px로 두면 앱이 쓰는 폭이 375px쯤으로 줄어 한 줄 문구가 두 줄로 넘어간다.
+     좁은 화면에서는 폭을 줄이지 않고 index.js가 비율대로 축소한다. */
+  position: absolute;
+  inset: auto;
+  top: 20px;
+  left: 50%;
+  width: var(--device-w, 460px);
+  height: calc(100% - 40px);
+  transform-origin: top center;
+  transform: translateX(-50%) scale(var(--device-scale, 1));
+  border-radius: 24px;
+  box-shadow: 0 0 0 8px #1b2421;
+}
+.ext-demo[data-device="mobile"] .demo-placeholder {
+  z-index: 0;
+}
+@media (max-width: 720px) {
+  .ext-demo__frame {
+    aspect-ratio: 4 / 5;
+  }
+  .ext-demo[data-device="mobile"] .ext-demo__frame {
+    height: 640px;
+  }
+}
+
+/* 해커톤 데모: 오른쪽 절반 위 스크롤 안내 */
+.scroll-hint {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: rgba(13, 19, 17, 0.72);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none; /* 아래 화면 조작을 막지 않는다 */
+  transition: opacity 0.4s ease;
+}
+.scroll-hint.is-hidden {
+  opacity: 0;
+}
+.scroll-hint__mouse {
+  position: relative;
+  width: 24px;
+  height: 38px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+}
+.scroll-hint__wheel {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: #fff;
+  animation: scroll-wheel 1.4s ease-in-out infinite;
+}
+@keyframes scroll-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint__wheel {
+    animation: none;
   }
 }
 

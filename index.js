@@ -5,6 +5,10 @@ const toast = document.getElementById("toast");
 const progressBar = document.getElementById("progressBar");
 const navLinks = [...document.querySelectorAll("#nav a")];
 const blocks = [...document.querySelectorAll("main > header, main > section")];
+// 하위 메뉴가 가리키는 소제목들
+const subTargets = [...document.querySelectorAll("#nav a.nav-sub")]
+  .map((a) => document.getElementById(a.getAttribute("href").slice(1)))
+  .filter(Boolean);
 
 // ── 테마 ──
 themeBtn.addEventListener("click", () => {
@@ -37,7 +41,16 @@ function onScroll() {
   let current = blocks[0].id;
   for (const b of blocks) if (b.getBoundingClientRect().top <= 140) current = b.id;
   if (atEnd) current = blocks[blocks.length - 1].id;
-  navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#${current}`));
+  // 섹션 안의 하위 메뉴(예: 관제 화면, 자동화 모듈): 지나간 소제목 중 마지막 것
+  let currentSub = null;
+  for (const h of subTargets) {
+    if (h.closest("main > section")?.id === current && h.getBoundingClientRect().top <= 160) currentSub = h.id;
+  }
+  if (atEnd) currentSub = null;
+  navLinks.forEach((a) => {
+    const id = a.getAttribute("href").slice(1);
+    a.classList.toggle("active", id === current || id === currentSub);
+  });
   progressBar.style.width = scrollable > 0 ? `${(scrollY / scrollable) * 100}%` : "0%";
 }
 addEventListener("scroll", onScroll, { passive: true });
@@ -159,6 +172,10 @@ const FEATURE_TRIGGERS = {
     "ahu-status-color": (doc, flash) => onEnter(doc, ".ahu-tag", flash),
     // AHU 화면: 운전/정지 스위치
     "ahu-control": (doc, flash) => onClickIn(doc, ".ahu-switch", flash),
+    // TREND: 차트 영역
+    "trend-view": (doc, flash) => onEnter(doc, ".trend-chart", flash),
+    // TREND: 설비 선택 창을 열거나 설비를 고름(여러 개 선택 = 겹쳐 보기)
+    "trend-tools": (doc, flash) => onClickIn(doc, ".trend__open, .picker__item", flash),
   },
 };
 
@@ -186,3 +203,83 @@ frame.addEventListener("load", () => {
     attach(doc, () => flashFeature(name));
   }
 });
+
+// ── 외부 데모(Daily Set, 해커톤) ──
+// index.html의 .ext-demo 에 data-demo-url="https://..." 만 넣으면 iframe으로 띄운다.
+// 화면에 가까워졌을 때 처음 불러온다. 주소가 비어 있으면 '준비 중' 문구만 보인다.
+document.querySelectorAll(".ext-demo").forEach((box) => {
+  const url = box.dataset.demoUrl?.trim();
+  if (!url) return;
+  const frameBox = box.querySelector(".ext-demo__frame");
+  const open = box.querySelector(".ext-demo__open");
+  open.href = url;
+  open.hidden = false;
+
+  new IntersectionObserver((entries, obs) => {
+    if (!entries.some((e) => e.isIntersecting)) return;
+    obs.disconnect();
+    const iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.title = box.closest("section")?.querySelector("h2")?.textContent.trim() || "데모";
+    iframe.loading = "lazy";
+    frameBox.querySelector(".demo-placeholder").textContent = "데모를 불러오는 중…";
+    frameBox.append(iframe);
+    if (box.dataset.device === "mobile") fitDevice(frameBox, iframe);
+    if (box.dataset.scrollHint) addScrollHint(frameBox, iframe, box.dataset.scrollHint);
+  }, { rootMargin: "200px" }).observe(box);
+});
+
+/**
+ * 휴대폰 프레임이 들어갈 폭이 모자라면 폭을 줄이는 대신 통째로 축소한다.
+ * (폭을 줄이면 앱 안의 줄바꿈이 바뀌어 실제 휴대폰과 다르게 보이기 때문)
+ * 축소한 만큼 높이를 늘려, 축소 후에도 프레임 높이를 꽉 채우게 한다.
+ */
+function fitDevice(frameBox, iframe) {
+  const DEVICE_W = 460;
+  const SIDE_GAP = 32; // 좌우 여백 + 테두리
+  const fit = () => {
+    const scale = Math.min(1, (frameBox.clientWidth - SIDE_GAP) / DEVICE_W);
+    iframe.style.setProperty("--device-w", `${DEVICE_W}px`);
+    iframe.style.setProperty("--device-scale", scale.toFixed(3));
+    iframe.style.height = `${(frameBox.clientHeight - 40) / scale}px`;
+  };
+  new ResizeObserver(fit).observe(frameBox);
+  fit();
+}
+
+/**
+ * 데모 오른쪽 절반 위에 "스크롤해 보세요" 안내를 겹쳐 띄운다(해커톤 데모).
+ * 안내는 마우스 이벤트를 통과시켜 아래 화면 조작을 막지 않는다.
+ * 외부 사이트라 iframe 안의 스크롤은 알 수 없으므로, 데모 안을 클릭하거나
+ * 데모 위에 마우스를 3초 올려 두면 사라지게 한다.
+ */
+function addScrollHint(frameBox, iframe, text) {
+  const hint = document.createElement("div");
+  hint.className = "scroll-hint";
+  hint.setAttribute("aria-hidden", "true");
+  hint.innerHTML = '<span class="scroll-hint__mouse"><span class="scroll-hint__wheel"></span></span>';
+  hint.append(text);
+  frameBox.append(hint);
+
+  let timer = null;
+  let hovering = false;
+  const dismiss = () => {
+    hint.classList.add("is-hidden");
+    clearTimeout(timer);
+  };
+  frameBox.addEventListener("mouseenter", () => {
+    hovering = true;
+    timer = setTimeout(dismiss, 3000);
+  });
+  frameBox.addEventListener("mouseleave", () => {
+    hovering = false;
+    clearTimeout(timer);
+  });
+  // iframe 안을 클릭하면 포커스가 iframe으로 옮겨간다. 창에 포커스가 없으면 blur 이벤트가
+  // 오지 않으므로 주기적으로 확인한다. 사이트가 스스로 포커스를 가져가는 경우(autofocus)와
+  // 구분하려고, 마우스가 데모 위에 있을 때만 사용자의 클릭으로 본다.
+  const watch = setInterval(() => {
+    if (hint.classList.contains("is-hidden")) return clearInterval(watch);
+    if (hovering && document.activeElement === iframe) dismiss();
+  }, 300);
+}

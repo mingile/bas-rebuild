@@ -22,8 +22,12 @@
         <nav id="nav">
           <a href="#intro">Intro</a>
           <a href="#work"
-            >유원엠엠아이에서 한 일<small>2022.06 – 2026.02</small></a
+            >통합 관제 시스템 구축<small
+              >SI 프로젝트 · 2022.06 – 2026.02</small
+            ></a
           >
+          <a class="nav-sub" href="#work-screen">관제 화면</a>
+          <a class="nav-sub" href="#work-pipeline">자동화 모듈</a>
           <a href="#dailyset">Daily Set<small>퇴사 후 개인 프로젝트</small></a>
           <a href="#hackathon"
             >남동산단 청년 해커톤<small>퇴사 후 · 해커톤</small></a
@@ -57,14 +61,16 @@
               >
             </div>
             <p class="summary">
-              빌딩 자동화 솔루션 회사에서 3년 9개월 동안 SI 프로젝트를 맡아, 약
-              300개 건물의 이기종 설비 데이터를 하나의 관제 시스템으로 통합하고
-              그 위에 관제 화면을 구축했습니다. 엑셀 포인트 목록을 설정 파일로
-              변환해 시스템에 일괄 반영하는 자동화 파이프라인을 Python과 Java로
-              만들어, 반복 엔지니어링 작업 시간을 75% 줄였습니다.
+              빌딩 자동화 솔루션 회사에서 3년 9개월 동안 SI 프로젝트를 맡아,
+              대규모 군사 시설의 이기종 설비 데이터를 하나의 관제 시스템으로
+              통합하고 그 위에 관제 화면을 구축했습니다. 엑셀 포인트 목록을 설정
+              파일로 변환해 시스템에 일괄 반영하는 자동화 파이프라인을 Python과
+              Java로 만들어, 반복 엔지니어링 작업 시간을 75% 줄였습니다.
             </p>
             <div class="hero-cta">
-              <a class="button primary" href="#work">재직 중 한 일 보기</a>
+              <a class="button primary" href="#work"
+                >통합 관제 시스템 구축 보기</a
+              >
               <a class="button" href="#dailyset">Daily Set</a>
             </div>
           </div>
@@ -80,7 +86,7 @@
               <strong>3년 9개월</strong><span>솔루션 회사 SI 프로젝트</span>
             </div>
             <div class="stat">
-              <strong>약 300개 건물</strong
+              <strong>대규모 군사 시설</strong
               ><span>이기종 설비 데이터 통합 관제</span>
             </div>
             <div class="stat">
@@ -90,16 +96,18 @@
           </div>
         </header>
 
-        <!-- ── 재직 중 한 일 ────────────────────────────────── -->
+        <!-- ── 통합 관제 시스템 구축 ────────────────────────────────── -->
         <section id="work">
           <p class="eyebrow">Experience · 2022.06 – 2026.02</p>
-          <h2>유원엠엠아이에서 한 일</h2>
+          <h2>대규모 군사 시설 통합 관제 시스템 구축</h2>
           <p class="meta">
-            Niagara N4 Engineer · 빌딩 자동화 솔루션 회사 · SI 프로젝트
+            Niagara N4 Engineer · 유원엠엠아이(빌딩 자동화 솔루션 회사) · SI
+            프로젝트
           </p>
           <ul class="lead">
             <li>
-              평택 미군부대 내 약 300개 건물 대상 BAS 시스템 통합 프로젝트 수행
+              대규모 군사 시설 내 수 백개 건물 대상으로 한 BAS 시스템 통합
+              프로젝트 수행
             </li>
             <li>
               이기종 제조사(JCI, Schneider 등)·프로토콜(BACnet, LON) 설비
@@ -116,7 +124,7 @@
             <h3>왜 다시 만들었나</h3>
             <ol>
               <li>
-                군부대 프로젝트라 당시 화면 캡처나 소스코드를 가지고 나올 수
+                군사 시설 프로젝트라 당시 화면 캡처나 소스코드를 반출할 수
                 없었습니다.
               </li>
               <li>그래서 당시 구현한 화면과 기능을 다시 만들었습니다.</li>
@@ -127,7 +135,7 @@
             </ol>
           </div>
 
-          <h3 class="sub-head">
+          <h3 class="sub-head" id="work-screen">
             1. 관제 화면<small
               >당시: 플랫폼 내장 그래픽 에디터로 구성 · 재구성: Vanilla
               JavaScript / SVG / Leaflet / Chart.js</small
@@ -251,26 +259,30 @@
                 <h4>구현 내용 <small>플랫폼 그래픽 에디터로 구성</small></h4>
                 <ul>
                   <li data-feature="ahu-layout">
-                    <b>화면 설계</b> 건물별 도면과 HVAC 다이어그램을 기준으로 설비를
-                    배치해, 건물마다·설비마다 서로 다른 AHU 화면을 각각 설계
+                    <b>화면 설계</b> 건물별 도면과 HVAC 다이어그램을 기준으로
+                    설비를 배치해, 건물마다·설비마다 서로 다른 AHU 화면을 각각
+                    설계
                   </li>
                   <li data-feature="ahu-state">
-                    <b>직접 구현</b> 설비 상태 표현 — 플랫폼 기본 이미지에 포토샵으로
-                    편집한 이미지를 더해 쓰고, 설비 상태에 따라 이미지가 바뀌는 로직과
-                    애니메이션(팬 회전, 댐퍼 열림·닫힘 등)을 직접 구현
+                    <b>직접 구현</b> 설비 상태 표현 — 플랫폼 기본 이미지에
+                    포토샵으로 편집한 이미지를 더해 쓰고, 설비 상태에 따라
+                    이미지가 바뀌는 로직과 애니메이션(팬 회전, 댐퍼 열림·닫힘
+                    등)을 직접 구현
                   </li>
                   <li data-feature="ahu-status-color">
-                    <b>직접 설정</b> 포인트 상태 표시 — 값 이상·알람뿐 아니라 네트워크
-                    상태(응답 없음, 응답은 있으나 정상 아님)까지 배경색으로 구분해,
-                    운영자가 설비 문제와 통신 문제를 한눈에 구별할 수 있게 구성
+                    <b>직접 설정</b> 포인트 상태 표시 — 값 이상·알람뿐 아니라
+                    네트워크 상태(응답 없음, 응답은 있으나 정상 아님)까지
+                    배경색으로 구분해, 운영자가 설비 문제와 통신 문제를 한눈에
+                    구별할 수 있게 구성
                   </li>
                   <li data-feature="ahu-control">
-                    <b>운영 기능</b> 운전/정지 명령, 설정값(setpoint) 변경, 알람 표시를
-                    화면에서 바로 할 수 있게 구성
+                    <b>운영 기능</b> 운전/정지 명령, 설정값(setpoint) 변경, 알람
+                    표시를 화면에서 바로 할 수 있게 구성
                   </li>
                   <li>
-                    <b>직접 구현</b> 가상 포인트 — 기존 데이터 포인트만으로는 구현할 수
-                    없는 화면 로직을 위해 가상 포인트를 새로 만들어 연결
+                    <b>직접 구현</b> 가상 포인트 — 기존 데이터 포인트만으로는
+                    구현할 수 없는 화면 로직을 위해 가상 포인트를 새로 만들어
+                    연결
                   </li>
                 </ul>
               </div>
@@ -278,21 +290,27 @@
 
             <div class="detail" data-panel="3" hidden>
               <div class="detail-col">
-                <h4>구현 내용 <small>트렌드 데이터 수집과 연계</small></h4>
+                <h4>구현 내용 <small>플랫폼 히스토리 뷰 활용</small></h4>
                 <ul>
-                  <li>
-                    플랫폼에서 수집한 트렌드 데이터를 다른 팀이 가져갈 수 있도록
-                    MySQL 테이블을 만들고, 플랫폼의 MySQL 드라이버로
-                    내보냈습니다.
+                  <li data-feature="trend-view">
+                    <b>화면 구성</b> 프로젝트 전용으로 만든 건물 화면 안에
+                    히스토리 뷰를 배치하고, 상단 메뉴의 TREND 버튼 하나로
+                    진입하도록 구성
                   </li>
-                  <li>
-                    회사가 프로젝트에서 철수해 실사용 전에 종료되었습니다.
+                  <li data-feature="trend-collect">
+                    <b>수집 설정</b> 계약 시 정한 포인트(온도, 풍량, 연기 감지,
+                    동결 감지 등)를 정해진 기준(15분 간격)에 맞춰 트렌드로
+                    기록하도록 설정
+                  </li>
+                  <li data-feature="trend-tools">
+                    <b>플랫폼 활용</b> 기간 선택, 여러 포인트 겹쳐 보기, 데이터
+                    내보내기는 플랫폼 기본 히스토리 뷰 기능을 그대로 활용
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <h3 class="sub-head">
+          <h3 class="sub-head" id="work-pipeline">
             2. 자동화 파이프라인 (Python · Java)
             <span class="status todo">재구성 준비 중</span>
           </h3>
@@ -310,6 +328,30 @@
             남을 위한 서비스가 아니라 제가 매일 쓰면서 겪은 불편을 풀려고
             시작했습니다.
           </p>
+
+          <!-- 데모 주소: data-demo-url 에 배포 주소(https://...)를 붙여넣으면 바로 화면이 뜹니다. 비워 두면 '준비 중'으로 표시 -->
+          <div
+            class="ext-demo"
+            data-demo-url="https://ex-log-five.vercel.app"
+            data-device="mobile"
+          >
+            <div class="ext-demo__frame">
+              <div class="demo-placeholder">데모 준비 중입니다</div>
+            </div>
+            <div class="demo-foot">
+              <p class="hint">
+                실제 배포된 Daily Set입니다. 모바일 화면 크기로 띄웠습니다.
+              </p>
+              <a
+                class="button ext-demo__open"
+                href="https://ex-log-five.vercel.app"
+                target="_blank"
+                rel="noopener"
+                hidden
+                >새 창에서 크게 보기 ↗</a
+              >
+            </div>
+          </div>
           <div class="grid">
             <article class="card decision">
               <h3>
@@ -359,18 +401,92 @@
         <section id="hackathon">
           <p class="eyebrow">퇴사 후 · Hackathon</p>
           <h2>
-            남동산단 청년 해커톤 <span class="status todo">내용 준비 중</span>
+            남동산단 청년 해커톤 · Spoonbill Run
+            <span class="status done">2등</span>
           </h2>
-          <p class="meta">해커톤 출품작 · 기간 / 역할 / 기술 스택</p>
-          <p class="lead">무엇을 만들었는지 한두 문장으로 소개합니다.</p>
+          <p class="meta">
+            1일 해커톤(22:00 – 07:00) · 4인 팀(기획 · 사진 · 디자인 · 개발) ·
+            개발 담당 · Vanilla JavaScript / Leaflet
+          </p>
+          <p class="lead">
+            산업단지의 어둡고 칙칙한 이미지를 바꾸고 유동인구를 늘리기 위해,
+            남동산단 주변을 달리며 저어새 모양을 그리는 드로잉런 코스
+            <b>Spoonbill Run</b>을 제안했습니다. 이 웹페이지는 전시용으로 만든
+            러닝 코스와 주변 환경 아카이브이며, 11월 남동산단 팝업 전시에 소개될
+            예정입니다.
+          </p>
+
+          <!-- 데모 주소: data-demo-url 에 배포 주소(https://...)를 붙여넣으면 바로 화면이 뜹니다. 비워 두면 '준비 중'으로 표시 -->
+          <div
+            class="ext-demo"
+            data-demo-url="https://spoonbillrun.vercel.app/"
+            data-device="desktop"
+            data-scroll-hint="스크롤해서 사진 보기"
+          >
+            <div class="ext-demo__frame">
+              <div class="demo-placeholder">데모 준비 중입니다</div>
+            </div>
+            <div class="demo-foot">
+              <p class="hint">
+                왼쪽 지도에서 저어새 얼굴 버튼과 RUN 버튼을 눌러 보고, 오른쪽
+                화면은 마우스 스크롤로 확대해 아카이브 사진을 열어 보세요.
+              </p>
+              <a
+                class="button ext-demo__open"
+                href="https://spoonbillrun.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                hidden
+                >새 창에서 크게 보기 ↗</a
+              >
+            </div>
+          </div>
           <div class="grid">
             <article class="card decision">
               <h3><span class="num">1</span>풀려고 한 문제</h3>
-              <p class="why">준비 중</p>
+              <p>
+                불편을 고치기보다 <b>산업단지를 찾아오게 만드는 것</b>이
+                목표였습니다. 제가 낸 아이디어로, 댕댕런 같은 드로잉런 형식을
+                빌려 남동산단 주변에 지역의 상징인 저어새 모양 러닝 코스를
+                그렸습니다.
+              </p>
+              <p class="why">
+                최종 형태는 러닝 앱이고, 이번 결과물은 전시에서 코스와 주변
+                풍경(사진과 설명)을 보여 주는 인터랙티브 웹페이지입니다.
+              </p>
             </article>
             <article class="card decision">
               <h3><span class="num">2</span>내가 맡은 부분</h3>
-              <p class="why">준비 중</p>
+              <p>
+                팀의 유일한 개발 담당으로 화면 구성과 기능 설계를 맡았습니다.
+                9시간 안에 완성해야 해서 구현은 AI 도구를 활용했습니다.
+              </p>
+              <ul>
+                <li>
+                  <b>지도</b> Leaflet 지도 위에 저어새 모양 코스를 그리고,
+                  코스를 읽기 쉽게 저어새 얼굴 이미지 버튼 배치
+                </li>
+                <li>
+                  <b>RUN 시뮬레이션</b> 코스를 달리며 장소를 지날 때마다 마커가
+                  찍히는 과정을 버튼 하나로 재현
+                </li>
+                <li>
+                  <b>아카이브</b> 스크롤로 확대하면 크기가 제각각인 원형 사진이
+                  나타났다 사라지는 사진첩, 사진을 누르면 아래 영역에 큰 사진과
+                  상세 정보 표시
+                </li>
+              </ul>
+            </article>
+            <article class="card decision" style="grid-column: 1 / -1">
+              <h3><span class="num">3</span>시간 안에 끝내기 위한 판단</h3>
+              <p>
+                원래 계획은 러닝 앱이었지만 하룻밤 안에는 불가능하다고 보고,
+                코스와 아카이브를 보여 주는 인터랙션 웹페이지로 범위를
+                줄였습니다. 대신 RUN으로 마커를 모두 찍으면 그 자리에
+                <b>APP</b> 버튼이 나타나, 팀 디자이너가 Figma로 만든 앱 UI를
+                미리 볼 수 있게 이어 붙였습니다. 만들지 못한 앱을 전시 흐름
+                안에서 예고로 보여 준 셈입니다.
+              </p>
             </article>
           </div>
         </section>
@@ -399,8 +515,10 @@
           <h3 class="sub-head">스킬</h3>
           <div class="skills">
             <dl>
-              <dt>Web</dt>
-              <dd>JavaScript, TypeScript, React, Next.js, Node.js</dd>
+              <dt>프로그래밍 언어</dt>
+              <dd>JavaScript, TypeScript, Java, Python, jQuery</dd>
+              <dt>프레임워크 · 런타임</dt>
+              <dd>React, Next.js, Node.js, shadcn/ui, Tailwind CSS</dd>
               <dt>Data & API</dt>
               <dd>REST API, Notion API, MongoDB, SQLite, localStorage</dd>
               <dt>BAS / 시스템 통합</dt>
@@ -408,10 +526,11 @@
                 Niagara N4, JACE, SmartServer IoT, BACnet, LON, Metasys, Niagara
                 커스텀 모듈 개발, Node-RED
               </dd>
-              <dt>자동화</dt>
-              <dd>Python 도구 작성, XML 파싱, 배치 처리, Make, n8n</dd>
               <dt>Tools</dt>
-              <dd>Git, Vercel, Cursor, Claude Code, Notion, Obsidian</dd>
+              <dd>
+                Git, Vercel, Cursor, Claude Code, Notion, Obsidian, Figma,
+                Slack, Postman
+              </dd>
             </dl>
           </div>
 
