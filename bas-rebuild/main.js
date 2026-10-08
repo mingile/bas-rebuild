@@ -147,13 +147,14 @@ function createMap() {
 const MARKER_SIZE = [10, 10];
 const MARKER_ANCHOR = [5, 5];
 
-// pin.png(549x455)를 너비 75px로 표시할 때의 크기. 핀 끝(하단 중앙)이 좌표를 가리킨다
+// pin.png(549x455)를 너비 75px로 표시할 때의 최대 크기(Leaflet divIcon 기본값).
+// 실제 표시 크기/앵커는 style.css의 .user-wrap 이 --pin-w 로 덮어써 반응형으로 동작한다.
 const PIN_W = 75;
 const PIN_H = Math.round(PIN_W * 455 / 549);
 
 function createMarker(bldg) {
     const a = Object.assign(document.createElement('a'), {
-        className:`${bldg.linkClass} marker_link`, href: bldg.href, target:'_top',
+        className:`${bldg.linkClass} marker_link`, href: bldg.href, target:'_self',
     });
     const info = Object.assign(document.createElement('div'), {
         className: `${bldg.infoClass} marker_info`, textContent:bldg.label,
@@ -172,9 +173,8 @@ function createMarker(bldg) {
 
 function showPin(hit) {
     const img = Object.assign(document.createElement('img'), {className: 'point', src: 'images/pin.png'});
-    img.style.width = `${PIN_W}px`;
     const text = Object.assign(document.createElement('p'), {className: 'text', textContent: hit.textContent});
-    const a = Object.assign(document.createElement('a'), {id: 'bldg', href: hit.href, target: '_top'});
+    const a = Object.assign(document.createElement('a'), {id: 'bldg', href: hit.href, target: '_self'});
     a.append(img, text);
 
     hidePin();
