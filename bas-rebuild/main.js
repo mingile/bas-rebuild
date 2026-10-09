@@ -4,9 +4,10 @@ let pin = null;
 
 // HTML 뿐만 아니라 이미지, CSS, 폰트 등 모든 리소스가 로드된 후
 window.onload = function () {
-  document.getElementById("search").focus();
   document.querySelector("#search").removeAttribute("required");
-  document.querySelector("input").focus();
+  // 포트폴리오 페이지 안(iframe)에서 열렸을 때는 자동 포커스를 하지 않는다.
+  // iframe 안의 요소에 포커스를 주면 브라우저가 그 요소를 보여 주려고 바깥 페이지까지 스크롤한다.
+  if (window.self === window.top) document.getElementById("search").focus();
 };
 
 window.addEventListener("keydown", (e) => {

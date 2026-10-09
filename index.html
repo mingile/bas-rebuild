@@ -27,7 +27,9 @@
             ></a
           >
           <a class="nav-sub" href="#work-screen">관제 화면</a>
-          <a class="nav-sub" href="#work-pipeline">자동화 모듈</a>
+          <a class="nav-sub" href="#work-pipeline">자동화 파이프라인</a>
+          <a class="nav-sub" href="#work-module">커스텀 모듈</a>
+          <a class="nav-sub" href="#work-data">데이터 연동</a>
           <a href="#dailyset">Daily Set<small>퇴사 후 개인 프로젝트</small></a>
           <a href="#hackathon"
             >남동산단 청년 해커톤<small>퇴사 후 · 해커톤</small></a
@@ -311,9 +313,83 @@
             </div>
           </div>
           <h3 class="sub-head" id="work-pipeline">
-            2. 자동화 파이프라인 (Python · Java)
+            2. 자동화 파이프라인
             <span class="status todo">재구성 준비 중</span>
           </h3>
+          <div class="detail-col">
+            <h4>구현 내용 <small>Python</small></h4>
+            <ul>
+              <li>
+                <b>문제 발견</b> 데이터베이스 팀이 엑셀로 넘긴 바인딩 정보를
+                팀원들이 플랫폼 안에서 XML 기반 포인트 매핑으로 일일이 옮기고
+                있었습니다. 단순 반복이라 시간이 많이 들고 실수가 잦았습니다.
+              </li>
+              <li>
+                <b>직접 구현</b> 건물별 포인트 주솟값의 규칙성을 찾아, 엑셀에서
+                필요한 데이터만 파싱해 XML을 일괄 생성하는 Python 도구 제작.
+                산출물은 포인트 매핑 · 히스토리 · 알람 · 단위 변환 용도별로 분리
+              </li>
+              <li>
+                <b>팀 배포</b> tkinter로 GUI를 만들고 exe로 패키징해 팀원
+                3~6명이 Python 설치 없이 바로 쓰도록 배포
+              </li>
+              <li>
+                <b>지속 개선</b> 규칙에 맞지 않는 예외 데이터는 팀원들이 노션과
+                Slack에 건물과 내용을 올리면 도구에 반영. 모든 건물 유형을
+                파악한 프로젝트 후반부에는 프로젝트 범위 안에서 오류 없이
+                안정적으로 적용
+              </li>
+              <li>
+                <b>성과</b> 3번의 포인트 일괄 삽입 컴포넌트와 이어지는 전체
+                흐름으로, 포인트 1,000개 기준 작업 시간 2일 → 0.5일. 향후 견적
+                산정을 위해 팀 작업 기록으로 포인트별 소요 시간을 실제로 계산한
+                결과
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="sub-head" id="work-module">
+            3. 커스텀 모듈
+            <span class="status todo">재구성 준비 중</span>
+          </h3>
+          <div class="detail-col">
+            <h4>구현 내용 <small>Java</small></h4>
+            <ul>
+              <li>
+                <b>직접 구현</b> 포인트 일괄 삽입 컴포넌트 — 자동화 파이프라인이
+                만든 파일을 읽어, 규칙에 따라 각 포인트에 확장 기능을 일괄 삽입.
+                플랫폼 안에서 바로 실행할 수 있는 컴포넌트로 제작
+              </li>
+              <li>
+                <b>직접 구현</b> DDC 제어 로직 모듈 — 기존 DDC(JCI) 제어 로직을
+                플랫폼에서 재현하려면 수십 개의 노드를 서로 연결해야 했습니다.
+                이를 Java로 구현해 노드 1개로 대체(로직 자체는 기존 시스템의
+                것을 사용)
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="sub-head" id="work-data">
+            4. 데이터 연동<span class="status todo">재구성 준비 중</span>
+          </h3>
+          <div class="detail-col">
+            <h4>구현 내용 <small>MQTT · MySQL</small></h4>
+            <ul>
+              <li>
+                <b>테스트</b> MQTT 연동 — 스마트서버 IoT 장비의 상태와, 장비에
+                연결된 DDC들의 포인트 데이터를 BACnet 외에 MQTT로도 받아오도록
+                연결하고, 이를 보여 주는 커스텀 웹페이지를 제작. 관제 플랫폼을
+                쓸 수 없는 현장에 대비해 대안을 검증한 테스트로, 실사용은 하지
+                않았습니다.
+              </li>
+              <li>
+                <b>설계</b> 트렌드 데이터 DB 적재 — 플랫폼의 RDBMS 드라이버로
+                MySQL 서버를 연동해 테이블을 만들고, 매일 정해진 시간에 트렌드
+                데이터가 자동으로 insert되도록 설계. 운영에 들어가기 전에 퇴사해
+                실운영은 하지 못했습니다.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!-- ── 퇴사 후 개인 프로젝트 ───────────────────────── -->
